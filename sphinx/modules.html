@@ -1,0 +1,554 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Modules &#8212; InsightSolver API Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=7a62b934"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'modules';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="insightsolver module" href="insightsolver.html" />
+    <link rel="prev" title="Advanced usage" href="usage_advanced.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">InsightSolver API Documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="usage.html">Usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage_quickstart.html">Quick Start Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_advanced.html">Advanced usage</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Modules</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="insightsolver.html">insightsolver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html">api_utilities module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">visualization module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Modules</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="modules">
+<h1>Modules<a class="headerlink" href="#modules" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="insightsolver.html">insightsolver module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="insightsolver.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="insightsolver.html#note">Note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="insightsolver.html#license">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.compute_admissible_btypes"><code class="docutils literal notranslate"><span class="pre">compute_admissible_btypes()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.compute_columns_names_to_admissible_btypes"><code class="docutils literal notranslate"><span class="pre">compute_columns_names_to_admissible_btypes()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.validate_class_integrity"><code class="docutils literal notranslate"><span class="pre">validate_class_integrity()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.format_value"><code class="docutils literal notranslate"><span class="pre">format_value()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.S_to_index_points_in_rule"><code class="docutils literal notranslate"><span class="pre">S_to_index_points_in_rule()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.resolve_language"><code class="docutils literal notranslate"><span class="pre">resolve_language()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.gain_to_percent"><code class="docutils literal notranslate"><span class="pre">gain_to_percent()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.search_best_ruleset_from_API_public"><code class="docutils literal notranslate"><span class="pre">search_best_ruleset_from_API_public()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.get_credits_available"><code class="docutils literal notranslate"><span class="pre">get_credits_available()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver"><code class="docutils literal notranslate"><span class="pre">InsightSolver</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.__init__"><code class="docutils literal notranslate"><span class="pre">InsightSolver.__init__()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.ingest_dict"><code class="docutils literal notranslate"><span class="pre">InsightSolver.ingest_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.ingest_json_string"><code class="docutils literal notranslate"><span class="pre">InsightSolver.ingest_json_string()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.is_fitted"><code class="docutils literal notranslate"><span class="pre">InsightSolver.is_fitted()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.fit"><code class="docutils literal notranslate"><span class="pre">InsightSolver.fit()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.S_to_index_points_in_rule"><code class="docutils literal notranslate"><span class="pre">InsightSolver.S_to_index_points_in_rule()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.S_to_s_points_in_rule"><code class="docutils literal notranslate"><span class="pre">InsightSolver.S_to_s_points_in_rule()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.S_to_df_filtered"><code class="docutils literal notranslate"><span class="pre">InsightSolver.S_to_df_filtered()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.ruleset_count"><code class="docutils literal notranslate"><span class="pre">InsightSolver.ruleset_count()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.i_to_rule"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_rule()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.i_to_S"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_S()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.i_to_subrules_dataframe"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_subrules_dataframe()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.i_to_feature_contributions_S"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_feature_contributions_S()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.i_to_feature_names"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_feature_names()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.i_to_readable_text"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_readable_text()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.i_to_print"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_print()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.get_range_i"><code class="docutils literal notranslate"><span class="pre">InsightSolver.get_range_i()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.print"><code class="docutils literal notranslate"><span class="pre">InsightSolver.print()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.print_light"><code class="docutils literal notranslate"><span class="pre">InsightSolver.print_light()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.print_dense"><code class="docutils literal notranslate"><span class="pre">InsightSolver.print_dense()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.to_dict"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_dict()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.to_json_string"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_json_string()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.to_dataframe"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_dataframe()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.to_csv"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_csv()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.to_excel"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_excel()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.to_excel_string"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_excel_string()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.get_credits_needed_for_computation"><code class="docutils literal notranslate"><span class="pre">InsightSolver.get_credits_needed_for_computation()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.get_df_credits_infos"><code class="docutils literal notranslate"><span class="pre">InsightSolver.get_df_credits_infos()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.get_credits_available"><code class="docutils literal notranslate"><span class="pre">InsightSolver.get_credits_available()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.convert_target_to_binary"><code class="docutils literal notranslate"><span class="pre">InsightSolver.convert_target_to_binary()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.compute_mutual_information"><code class="docutils literal notranslate"><span class="pre">InsightSolver.compute_mutual_information()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.plot"><code class="docutils literal notranslate"><span class="pre">InsightSolver.plot()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.to_pdf"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_pdf()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="insightsolver.html#insightsolver.insightsolver.InsightSolver.to_zip"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_zip()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api_utilities.html">api_utilities module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#functions-provided">Functions provided</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#license">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.hash_string"><code class="docutils literal notranslate"><span class="pre">hash_string()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.convert_bytes_to_base64_string"><code class="docutils literal notranslate"><span class="pre">convert_bytes_to_base64_string()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.convert_base64_string_to_bytes"><code class="docutils literal notranslate"><span class="pre">convert_base64_string_to_bytes()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.compress_string"><code class="docutils literal notranslate"><span class="pre">compress_string()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.decompress_string"><code class="docutils literal notranslate"><span class="pre">decompress_string()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.compress_and_encrypt_string"><code class="docutils literal notranslate"><span class="pre">compress_and_encrypt_string()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.decrypt_and_decompress_string"><code class="docutils literal notranslate"><span class="pre">decrypt_and_decompress_string()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.encode_obj"><code class="docutils literal notranslate"><span class="pre">encode_obj()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.convert_dict_to_json_string"><code class="docutils literal notranslate"><span class="pre">convert_dict_to_json_string()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.decode_obj"><code class="docutils literal notranslate"><span class="pre">decode_obj()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.convert_json_string_to_dict"><code class="docutils literal notranslate"><span class="pre">convert_json_string_to_dict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.transform_dict"><code class="docutils literal notranslate"><span class="pre">transform_dict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.untransform_dict"><code class="docutils literal notranslate"><span class="pre">untransform_dict()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.generate_keys"><code class="docutils literal notranslate"><span class="pre">generate_keys()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.generate_url_headers"><code class="docutils literal notranslate"><span class="pre">generate_url_headers()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.compute_credits_from_df"><code class="docutils literal notranslate"><span class="pre">compute_credits_from_df()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.request_cloud_credits_infos"><code class="docutils literal notranslate"><span class="pre">request_cloud_credits_infos()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.request_cloud_public_keys"><code class="docutils literal notranslate"><span class="pre">request_cloud_public_keys()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.request_cloud_computation"><code class="docutils literal notranslate"><span class="pre">request_cloud_computation()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html#insightsolver.api_utilities.search_best_ruleset_from_API_dict"><code class="docutils literal notranslate"><span class="pre">search_best_ruleset_from_API_dict()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="visualization.html">visualization module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#naming-conventions-of-the-visualization-functions">Naming conventions of the visualization functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#utilities">Utilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#mutual-information">Mutual information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#banner">Banner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#legend">Legend</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#feature-contributions">Feature contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#feature-distribution-for-feature">Feature distribution for feature</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#feature-distributions-for-s">Feature distributions for S</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#mosaic-of-rule-vs-complement-for-a-feature-for-the-rule-i">Mosaic of rule vs complement for a feature for the rule i</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#mosaics-of-rule-vs-complement-for-the-rule-i">Mosaics of rule vs complement for the rule i</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#mosaic-of-rule-vs-pop-vs-complement-for-the-rule-i">Mosaic of rule vs pop vs complement for the rule i</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#mosaics-of-rule-vs-pop-vs-complement">Mosaics of rule vs pop vs complement</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#complete-plot">Complete plot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#export-to-pdf">Export to PDF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#export-to-zip">Export to ZIP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#license">License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.classify_variable_as_continuous_or_categorical"><code class="docutils literal notranslate"><span class="pre">classify_variable_as_continuous_or_categorical()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.compute_feature_label"><code class="docutils literal notranslate"><span class="pre">compute_feature_label()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.truncate_label"><code class="docutils literal notranslate"><span class="pre">truncate_label()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.p_value_to_p_text"><code class="docutils literal notranslate"><span class="pre">p_value_to_p_text()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.svg_to_pil"><code class="docutils literal notranslate"><span class="pre">svg_to_pil()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.wrap_text_with_word_boundary"><code class="docutils literal notranslate"><span class="pre">wrap_text_with_word_boundary()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.save_figs_in_pdf"><code class="docutils literal notranslate"><span class="pre">save_figs_in_pdf()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.draw_mutual_information"><code class="docutils literal notranslate"><span class="pre">draw_mutual_information()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.make_mutual_information"><code class="docutils literal notranslate"><span class="pre">make_mutual_information()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.plot_mutual_information"><code class="docutils literal notranslate"><span class="pre">plot_mutual_information()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.make_banner_img_for_i"><code class="docutils literal notranslate"><span class="pre">make_banner_img_for_i()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.plot_banner_img_for_i"><code class="docutils literal notranslate"><span class="pre">plot_banner_img_for_i()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.make_banner_fig_for_i"><code class="docutils literal notranslate"><span class="pre">make_banner_fig_for_i()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.plot_banner_fig_for_i"><code class="docutils literal notranslate"><span class="pre">plot_banner_fig_for_i()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.make_legend_img"><code class="docutils literal notranslate"><span class="pre">make_legend_img()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.plot_legend_img"><code class="docutils literal notranslate"><span class="pre">plot_legend_img()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.make_legend_fig"><code class="docutils literal notranslate"><span class="pre">make_legend_fig()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.plot_legend_fig"><code class="docutils literal notranslate"><span class="pre">plot_legend_fig()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.draw_feature_contributions_for_i"><code class="docutils literal notranslate"><span class="pre">draw_feature_contributions_for_i()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.make_feature_contributions_for_i"><code class="docutils literal notranslate"><span class="pre">make_feature_contributions_for_i()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.plot_feature_contributions_for_i"><code class="docutils literal notranslate"><span class="pre">plot_feature_contributions_for_i()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.plot_feature_contributions_for_all"><code class="docutils literal notranslate"><span class="pre">plot_feature_contributions_for_all()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.draw_feature_distribution_for_feature"><code class="docutils literal notranslate"><span class="pre">draw_feature_distribution_for_feature()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.make_feature_distribution_for_feature"><code class="docutils literal notranslate"><span class="pre">make_feature_distribution_for_feature()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.plot_feature_distribution_for_feature"><code class="docutils literal notranslate"><span class="pre">plot_feature_distribution_for_feature()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.draw_feature_distributions_for_S"><code class="docutils literal notranslate"><span class="pre">draw_feature_distributions_for_S()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.make_feature_distributions_for_S"><code class="docutils literal notranslate"><span class="pre">make_feature_distributions_for_S()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.plot_feature_distributions_for_S"><code class="docutils literal notranslate"><span class="pre">plot_feature_distributions_for_S()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.draw_mosaic_rule_vs_comp_for_feature_for_i"><code class="docutils literal notranslate"><span class="pre">draw_mosaic_rule_vs_comp_for_feature_for_i()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.make_mosaic_rule_vs_comp_for_feature_for_i"><code class="docutils literal notranslate"><span class="pre">make_mosaic_rule_vs_comp_for_feature_for_i()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.plot_mosaic_rule_vs_comp_for_feature_for_i"><code class="docutils literal notranslate"><span class="pre">plot_mosaic_rule_vs_comp_for_feature_for_i()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.draw_mosaics_rule_vs_comp_for_i"><code class="docutils literal notranslate"><span class="pre">draw_mosaics_rule_vs_comp_for_i()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.make_mosaics_rule_vs_comp_for_i"><code class="docutils literal notranslate"><span class="pre">make_mosaics_rule_vs_comp_for_i()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.plot_mosaics_rule_vs_comp_for_i"><code class="docutils literal notranslate"><span class="pre">plot_mosaics_rule_vs_comp_for_i()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.draw_mosaic_rule_vs_pop_for_i"><code class="docutils literal notranslate"><span class="pre">draw_mosaic_rule_vs_pop_for_i()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.make_mosaic_rule_vs_pop_for_i"><code class="docutils literal notranslate"><span class="pre">make_mosaic_rule_vs_pop_for_i()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.plot_mosaic_rule_vs_pop_for_i"><code class="docutils literal notranslate"><span class="pre">plot_mosaic_rule_vs_pop_for_i()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.draw_mosaics_rule_vs_pop"><code class="docutils literal notranslate"><span class="pre">draw_mosaics_rule_vs_pop()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.make_mosaics_rule_vs_pop"><code class="docutils literal notranslate"><span class="pre">make_mosaics_rule_vs_pop()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.plot_mosaics_rule_vs_pop"><code class="docutils literal notranslate"><span class="pre">plot_mosaics_rule_vs_pop()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.make_all"><code class="docutils literal notranslate"><span class="pre">make_all()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.plot_all"><code class="docutils literal notranslate"><span class="pre">plot_all()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.make_pdf"><code class="docutils literal notranslate"><span class="pre">make_pdf()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html#insightsolver.visualization.make_zip"><code class="docutils literal notranslate"><span class="pre">make_zip()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="usage_advanced.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Advanced usage</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="insightsolver.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">insightsolver module</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Noé Aubin-Cadot
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, InsightSolver.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

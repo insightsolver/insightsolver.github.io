@@ -1,0 +1,1064 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>api_utilities module &#8212; InsightSolver API Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=7a62b934"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api_utilities';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="visualization module" href="visualization.html" />
+    <link rel="prev" title="insightsolver module" href="insightsolver.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">InsightSolver API Documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="usage.html">Usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage_quickstart.html">Quick Start Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_advanced.html">Advanced usage</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="modules.html">Modules</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="insightsolver.html">insightsolver module</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">api_utilities module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">visualization module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>api_utilities module</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-provided">Functions provided</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.hash_string"><code class="docutils literal notranslate"><span class="pre">hash_string()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.convert_bytes_to_base64_string"><code class="docutils literal notranslate"><span class="pre">convert_bytes_to_base64_string()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.convert_base64_string_to_bytes"><code class="docutils literal notranslate"><span class="pre">convert_base64_string_to_bytes()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.compress_string"><code class="docutils literal notranslate"><span class="pre">compress_string()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.decompress_string"><code class="docutils literal notranslate"><span class="pre">decompress_string()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.compress_and_encrypt_string"><code class="docutils literal notranslate"><span class="pre">compress_and_encrypt_string()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.decrypt_and_decompress_string"><code class="docutils literal notranslate"><span class="pre">decrypt_and_decompress_string()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.encode_obj"><code class="docutils literal notranslate"><span class="pre">encode_obj()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.convert_dict_to_json_string"><code class="docutils literal notranslate"><span class="pre">convert_dict_to_json_string()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.decode_obj"><code class="docutils literal notranslate"><span class="pre">decode_obj()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.convert_json_string_to_dict"><code class="docutils literal notranslate"><span class="pre">convert_json_string_to_dict()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.transform_dict"><code class="docutils literal notranslate"><span class="pre">transform_dict()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.untransform_dict"><code class="docutils literal notranslate"><span class="pre">untransform_dict()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.generate_keys"><code class="docutils literal notranslate"><span class="pre">generate_keys()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.generate_url_headers"><code class="docutils literal notranslate"><span class="pre">generate_url_headers()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.compute_credits_from_df"><code class="docutils literal notranslate"><span class="pre">compute_credits_from_df()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.request_cloud_credits_infos"><code class="docutils literal notranslate"><span class="pre">request_cloud_credits_infos()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.request_cloud_public_keys"><code class="docutils literal notranslate"><span class="pre">request_cloud_public_keys()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.request_cloud_computation"><code class="docutils literal notranslate"><span class="pre">request_cloud_computation()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.search_best_ruleset_from_API_dict"><code class="docutils literal notranslate"><span class="pre">search_best_ruleset_from_API_dict()</span></code></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-insightsolver.api_utilities">
+<span id="api-utilities-module"></span><h1>api_utilities module<a class="headerlink" href="#module-insightsolver.api_utilities" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p><cite>Organization</cite>:  InsightSolver Solutions Inc.</p></li>
+<li><p><cite>Project Name</cite>:  InsightSolver</p></li>
+<li><p><cite>Module Name</cite>:   insightsolver</p></li>
+<li><p><cite>File Name</cite>:     api_utilities.py</p></li>
+<li><p><cite>Author</cite>:        Noé Aubin-Cadot</p></li>
+<li><p><cite>Email</cite>:         <a class="reference external" href="mailto:noe&#46;aubin-cadot&#37;&#52;&#48;insightsolver&#46;com">noe<span>&#46;</span>aubin-cadot<span>&#64;</span>insightsolver<span>&#46;</span>com</a></p></li>
+</ul>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading">#</a></h2>
+<p>This file provides essential utility functions to secure and streamline client-server
+communication within the API. It includes functions for data compression, encryption, 
+decryption, and transformations of data structures, all designed to facilitate efficient 
+and protected message exchange between the client and server.</p>
+<p>While all communications are secured via HTTPS, this file goes a step further by adding
+an additional layer of encryption, using RSA-4096 and ECDSA-SECP521R1 for secure key exchange 
+and AES-256 for data encryption. These functions are particularly useful for scenarios 
+requiring enhanced data privacy and integrity.</p>
+</section>
+<section id="functions-provided">
+<h2>Functions provided<a class="headerlink" href="#functions-provided" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hash_string</span></code>: Computes the hash of a string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">convert_bytes_to_base64_string</span></code>: Convert bytes to a base64 string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">convert_base64_string_to_bytes</span></code>: Convert a base64 string to bytes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compress_string</span></code>: Compress a string using gzip.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">decompress_string</span></code>: Decompress a gzip-compressed string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compress_and_encrypt_string</span></code>: Compress and encrypt a string for secure transmission.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">decrypt_and_decompress_string</span></code>: Decrypt an encrypted string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">encode_obj</span></code>: Takes an object and encode it to a new object compatible with json serialization.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">convert_dict_to_json_string</span></code>: Convert a dict to a json string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">decode_obj</span></code>: Inverse operation from <code class="docutils literal notranslate"><span class="pre">encode_obj</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">convert_json_string_to_dict</span></code>: Convert a json string to a dict.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">transform_dict</span></code>: Convert a dictionary for easier client-server communication.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">untransform_dict</span></code>: Reverse the dictionary transformation to restore the original data format.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">generate_keys</span></code>: Generate RSA and ECDSA private and public keys.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">compute_credits_from_df</span></code>: Compute the amount of credits consumed for a given DataFrame.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">request_cloud_credits_infos</span></code>: Request the server for informations about the credits available.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">request_cloud_public_keys</span></code>: Request the server for public keys.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">request_cloud_computation</span></code>: Request the server for computation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">search_best_ruleset_from_API_dict</span></code>: Make the API call.</p></li>
+</ul>
+</section>
+<section id="license">
+<h2>License<a class="headerlink" href="#license" title="Link to this heading">#</a></h2>
+<p>Exclusive Use License - see <a class="reference external" href="license.html">LICENSE</a> for details.</p>
+</section>
+<hr class="docutils" />
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.hash_string">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">hash_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#insightsolver.api_utilities.hash_string" title="Link to this definition">#</a></dt>
+<dd><p>A function to compute the hash of a string using hashlib.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.convert_bytes_to_base64_string">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">convert_bytes_to_base64_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#insightsolver.api_utilities.convert_bytes_to_base64_string" title="Link to this definition">#</a></dt>
+<dd><p>Convert a bytes object to a base64-encoded string.</p>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>data<span class="classifier">bytes</span></dt><dd><p>The byte data to encode.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h2>Returns<a class="headerlink" href="#returns" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>str</dt><dd><p>The base64-encoded string.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.convert_base64_string_to_bytes">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">convert_base64_string_to_bytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bytes</span></span></span><a class="headerlink" href="#insightsolver.api_utilities.convert_base64_string_to_bytes" title="Link to this definition">#</a></dt>
+<dd><p>Convert a base64-encoded string to a bytes object.</p>
+<section id="id2">
+<h2>Parameters<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>string<span class="classifier">str</span></dt><dd><p>The base64-encoded string.</p>
+</dd>
+</dl>
+</section>
+<section id="id3">
+<h2>Returns<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>bytes</dt><dd><p>The decoded byte data.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.compress_string">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">compress_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">original_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#insightsolver.api_utilities.compress_string" title="Link to this definition">#</a></dt>
+<dd><p>Compress a string using gzip and then encode it to base64.</p>
+<section id="id4">
+<h2>Parameters<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>original_string<span class="classifier">str</span></dt><dd><p>The original string to be compressed.</p>
+</dd>
+</dl>
+</section>
+<section id="id5">
+<h2>Returns<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>str</dt><dd><p>The compressed string.</p>
+</dd>
+</dl>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">original_string</span> <span class="o">=</span> <span class="s2">&quot;This is a test string&quot;</span>
+<span class="n">compressed_string</span> <span class="o">=</span> <span class="n">compress_string</span><span class="p">(</span><span class="n">original_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">compressed_string</span><span class="p">)</span>  <span class="c1"># Example output: &#39;H4sIAA01/2YC/wvJyCxWAKJEhZLU4hKF4pKizLx0AG3zTmsVAAAA&#39;</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.decompress_string">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">decompress_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">compressed_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#insightsolver.api_utilities.decompress_string" title="Link to this definition">#</a></dt>
+<dd><p>Decompress a base64-encoded string that was previously compressed using gzip.</p>
+<p>This function takes a base64-encoded string, decodes it, and then decompresses
+the resulting data using gzip to return the original string.</p>
+<section id="id6">
+<h2>Parameters<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>compressed_string<span class="classifier">str</span></dt><dd><p>The base64-encoded string that contains the compressed data.</p>
+</dd>
+</dl>
+</section>
+<section id="id7">
+<h2>Returns<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>str</dt><dd><p>The original uncompressed string.</p>
+</dd>
+</dl>
+</section>
+<section id="id8">
+<h2>Example<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">compressed_string</span> <span class="o">=</span> <span class="s1">&#39;H4sIAA01/2YC/wvJyCxWAKJEhZLU4hKF4pKizLx0AG3zTmsVAAAA&#39;</span>
+<span class="n">original_string</span> <span class="o">=</span> <span class="n">decompress_string</span><span class="p">(</span><span class="n">compressed_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">original_string</span><span class="p">)</span> <span class="c1"># &#39;This is a test string&#39;</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.compress_and_encrypt_string">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">compress_and_encrypt_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">original_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#insightsolver.api_utilities.compress_and_encrypt_string" title="Link to this definition">#</a></dt>
+<dd><p>Compress and encrypt a string using AES-256-GCM.</p>
+<p>This function compresses the given string using gzip and then encrypts it using
+AES-256 in GCM mode. A nonce is used in the encryption process for AES-GCM, and
+the result is base64-encoded for easy transfer over networks.</p>
+<p>Security:
+- AES-256 encryption
+- GCM (Galois/Counter Mode) with authentication</p>
+<section id="id9">
+<h2>Parameters<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>original_string<span class="classifier">str</span></dt><dd><p>The original string to be compressed and encrypted.</p>
+</dd>
+<dt>symmetric_key<span class="classifier">bytes</span></dt><dd><p>The 32-byte symmetric key used for encryption.</p>
+</dd>
+</dl>
+</section>
+<section id="id10">
+<h2>Returns<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>tuple[str, str]</dt><dd><p>A tuple containing the base64-encoded encrypted compressed string and the base64-encoded nonce used.</p>
+</dd>
+</dl>
+</section>
+<section id="id11">
+<h2>Example<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">transformed_string</span><span class="p">,</span> <span class="n">nonce_string</span> <span class="o">=</span> <span class="n">compress_and_encrypt_string</span><span class="p">(</span>
+        <span class="n">original_string</span> <span class="o">=</span> <span class="s2">&quot;Secret data&quot;</span><span class="p">,</span>
+        <span class="n">symmetric_key</span>   <span class="o">=</span> <span class="n">token_bytes</span><span class="p">(</span><span class="mi">32</span><span class="p">),</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">transformed_string</span><span class="p">,</span> <span class="n">nonce_string</span><span class="p">)</span> <span class="c1"># &#39;Base64_encoded_result&#39;, nonce_string</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.decrypt_and_decompress_string">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">decrypt_and_decompress_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transformed_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nonce</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#insightsolver.api_utilities.decrypt_and_decompress_string" title="Link to this definition">#</a></dt>
+<dd><p>Decrypt and decompress a string using AES-256-GCM.</p>
+<p>This function takes a base64-encoded encrypted string, decrypts it using AES-256 in GCM mode 
+with the provided symmetric key and nonce, and then decompresses the result using gzip.</p>
+<p>Security:
+- AES-256 encryption
+- GCM (Galois/Counter Mode) with authentication</p>
+<section id="id12">
+<h2>Parameters<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>transformed_string<span class="classifier">str</span></dt><dd><p>The base64-encoded string that contains the encrypted and compressed data.</p>
+</dd>
+<dt>symmetric_key<span class="classifier">bytes</span></dt><dd><p>The 32-byte symmetric key used for decryption.</p>
+</dd>
+<dt>nonce<span class="classifier">bytes</span></dt><dd><p>The nonce used for AES-GCM during encryption.</p>
+</dd>
+</dl>
+</section>
+<section id="id13">
+<h2>Returns<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>str</dt><dd><p>The original uncompressed and decrypted string.</p>
+</dd>
+</dl>
+</section>
+<section id="raises">
+<h2>Raises<a class="headerlink" href="#raises" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>Exception</dt><dd><p>If the decryption fails.</p>
+</dd>
+</dl>
+</section>
+<section id="id14">
+<h2>Example<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">original_string</span> <span class="o">=</span> <span class="n">decrypt_and_decompress_string</span><span class="p">(</span>
+        <span class="n">transformed_string</span> <span class="o">=</span> <span class="n">encrypted_compressed_string</span><span class="p">,</span>
+        <span class="n">symmetric_key</span>      <span class="o">=</span> <span class="n">token_bytes</span><span class="p">(</span><span class="mi">32</span><span class="p">),</span>
+        <span class="n">nonce</span>              <span class="o">=</span> <span class="n">nonce</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">original_string</span><span class="p">)</span> <span class="c1"># &#39;Secret data&#39;</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.encode_obj">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">encode_obj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#insightsolver.api_utilities.encode_obj" title="Link to this definition">#</a></dt>
+<dd><p>This function takes an object and encode it to a new object compatible with json serialization.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.convert_dict_to_json_string">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">convert_dict_to_json_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#insightsolver.api_utilities.convert_dict_to_json_string" title="Link to this definition">#</a></dt>
+<dd><p>This function converts a dict to a json string.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.decode_obj">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">decode_obj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#insightsolver.api_utilities.decode_obj" title="Link to this definition">#</a></dt>
+<dd><p>This function does the inverse operation from the function <code class="docutils literal notranslate"><span class="pre">encode_obj</span></code>.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.convert_json_string_to_dict">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">convert_json_string_to_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#insightsolver.api_utilities.convert_json_string_to_dict" title="Link to this definition">#</a></dt>
+<dd><p>This function takes a json string and converts it to a dict.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.transform_dict">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">transform_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d_original</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_compress_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">json_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'json'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#insightsolver.api_utilities.transform_dict" title="Link to this definition">#</a></dt>
+<dd><p>Transform the contents of a dictionary by optionally compressing and encrypting its data.</p>
+<p>This function takes a dictionary and converts it to a string. Depending on the options provided, 
+it can compress the data using gzip, encrypt it using AES-256, or both. The resulting string is 
+returned in a transformed dictionary format for easier transmission or storage.</p>
+<section id="id15">
+<h2>Parameters<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>d_original<span class="classifier">dict</span></dt><dd><p>The original dictionary that needs to be transformed.</p>
+</dd>
+<dt>do_compress_data<span class="classifier">bool, optional</span></dt><dd><p>Whether or not to compress the dictionary data (default is False).</p>
+</dd>
+<dt>symmetric_key<span class="classifier">bytes, optional</span></dt><dd><p>A symmetric key. Typically generated using from secrets import token_bytes;symmetric_key = token_bytes(32). If provided, the data will be encrypted (default is None).</p>
+</dd>
+<dt>json_format<span class="classifier">str, optional</span></dt><dd><p>The format to convert the dictionary to a string. Can be ‘json’ or ‘json_extended’ (default is ‘json’).</p>
+</dd>
+</dl>
+</section>
+<section id="id16">
+<h2>Returns<a class="headerlink" href="#id16" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>dict</dt><dd><p>A dictionary containing the transformed string, the transformations applied, and the json format.</p>
+</dd>
+</dl>
+</section>
+<section id="id17">
+<h2>Example<a class="headerlink" href="#id17" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">d_original</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">secrets</span><span class="w"> </span><span class="kn">import</span> <span class="n">token_bytes</span>
+<span class="n">symmetric_key</span> <span class="o">=</span> <span class="n">token_bytes</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span> <span class="c1"># b&#39;\x1a\xef&amp;\x0bR\xe1\x95\xfa\x90\x10r\x93\x1a\xaeN\xc2\xba\x80\xf1\x1a\x0fG\xf4(\x0e#\xd4\xaf`\x81q\xf4&#39;</span>
+<span class="n">d_transformed</span> <span class="o">=</span> <span class="n">transform_dict</span><span class="p">(</span>
+        <span class="n">d_original</span>       <span class="o">=</span> <span class="n">d_original</span><span class="p">,</span>
+        <span class="n">do_compress_data</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">symmetric_key</span>    <span class="o">=</span> <span class="n">symmetric_key</span><span class="p">,</span>
+        <span class="n">json_format</span>      <span class="o">=</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d_transformed</span><span class="p">)</span>
+<span class="c1"># {</span>
+<span class="c1">#       &#39;transformations&#39;: &#39;encrypted_gzip_base64&#39;,</span>
+<span class="c1">#       &#39;json_format&#39;: &#39;json&#39;,</span>
+<span class="c1">#       &#39;transformed_string&#39;: &#39;q30qPkK19Z3sENnfk77t4CnpzWKV+gdHLLSpNNgU3DjdmEbLcZWj+AjZyFmUquuUmh6obZmTh8k=&#39;,</span>
+<span class="c1">#       &#39;nonce_string&#39;: &#39;7PpTvoc0Ksx8whRy&#39;,</span>
+<span class="c1"># }</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.untransform_dict">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">untransform_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d_transformed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">symmetric_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bytes</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#insightsolver.api_utilities.untransform_dict" title="Link to this definition">#</a></dt>
+<dd><p>Decompress and decrypt the contents of a transformed dictionary.</p>
+<p>This function takes a dictionary that has been transformed (e.g., compressed, encrypted),
+and restores its original contents by reversing the transformations. Depending on the 
+transformation type, it may decrypt and/or decompress the data.</p>
+<section id="id18">
+<h2>Parameters<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>d_transformed<span class="classifier">dict</span></dt><dd><p>The transformed dictionary containing the compressed/encrypted string, 
+the transformations applied, and the json format used.</p>
+</dd>
+<dt>symmetric_key<span class="classifier">bytes, optional</span></dt><dd><p>A symmetric key. Typically generated using <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">secrets</span> <span class="pre">import</span> <span class="pre">token_bytes;symmetric_key</span> <span class="pre">=</span> <span class="pre">token_bytes(32)</span></code>. If provided, the data will be decrypted using this key (default is None).</p>
+</dd>
+<dt>verbose<span class="classifier">bool, optional</span></dt><dd><p>If True, additional debug information will be printed (default is False).</p>
+</dd>
+</dl>
+</section>
+<section id="id19">
+<h2>Returns<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>dict</dt><dd><p>The original dictionary with its content restored.</p>
+</dd>
+</dl>
+</section>
+<section id="id20">
+<h2>Raises<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>Exception</dt><dd><p>If an invalid transformation type or JSON format is provided.</p>
+</dd>
+</dl>
+</section>
+<section id="id21">
+<h2>Example<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">d_transformed</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;transformations&#39;</span>    <span class="p">:</span> <span class="s1">&#39;encrypted_gzip_base64&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;json_format&#39;</span>        <span class="p">:</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;transformed_string&#39;</span> <span class="p">:</span> <span class="s1">&#39;q30qPkK19Z3sENnfk77t4CnpzWKV+gdHLLSpNNgU3DjdmEbLcZWj+AjZyFmUquuUmh6obZmTh8k=&#39;</span>
+        <span class="s1">&#39;nonce_string&#39;</span>       <span class="p">:</span> <span class="s1">&#39;7PpTvoc0Ksx8whRy&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">d_untransformed</span> <span class="o">=</span> <span class="n">untransform_dict</span><span class="p">(</span>
+        <span class="n">d_transformed</span> <span class="o">=</span> <span class="n">d_transformed</span><span class="p">,</span>
+        <span class="n">symmetric_key</span> <span class="o">=</span> <span class="n">symmetric_key</span><span class="p">,</span> <span class="c1"># b&#39;\x1a\xef&amp;\x0bR\xe1\x95\xfa\x90\x10r\x93\x1a\xaeN\xc2\xba\x80\xf1\x1a\x0fG\xf4(\x0e#\xd4\xaf`\x81q\xf4&#39;</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d_untransformed</span><span class="p">)</span> <span class="c1"># {&#39;A&#39;: 1, &#39;B&#39;: 2, &#39;C&#39;: 3}</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.generate_keys">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">generate_keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#insightsolver.api_utilities.generate_keys" title="Link to this definition">#</a></dt>
+<dd><p>This function generates RSA and ECDSA private and public keys.
+The generated keys:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rsa_private_key</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ecdsa_private_key</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rsa_public_key_pem_bytes</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ecdsa_public_key_pem_bytes</span></code></p></li>
+</ul>
+<section id="id22">
+<h2>Returns<a class="headerlink" href="#id22" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>tuple</dt><dd><p>A tuple containing four elements:</p>
+<ul class="simple">
+<li><p>rsa_private_key: The generated RSA private key.</p></li>
+<li><p>ecdsa_private_key: The generated ECDSA private key.</p></li>
+<li><p>rsa_public_key_pem_bytes: The RSA public key serialized in PEM format.</p></li>
+<li><p>ecdsa_public_key_pem_bytes: The ECDSA public key serialized in PEM format.</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.generate_url_headers">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">generate_url_headers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">computing_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_file_service_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#insightsolver.api_utilities.generate_url_headers" title="Link to this definition">#</a></dt>
+<dd><p>This function generates the url and the headers for the POST request.</p>
+<section id="id23">
+<h2>Parameters<a class="headerlink" href="#id23" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>computing_source<span class="classifier">str</span></dt><dd><p>Where the server is.</p>
+</dd>
+<dt>input_file_service_key<span class="classifier">optional</span></dt><dd><p>The client’s service key, needed if the server is remote.
+Default is <cite>None</cite>.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.compute_credits_from_df">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">compute_credits_from_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns_names_to_btypes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#insightsolver.api_utilities.compute_credits_from_df" title="Link to this definition">#</a></dt>
+<dd><p>This function computes the number of credits consumed by a rule mining via the API.
+This number is based on the size of the DataFrame sent to the API.</p>
+<p>Remark:
+The amount of credits debited is m*n where:
+- m is the number of rows of df (excluding the header).
+- n is the number of features to explore (i.e. the number of columns less the index, less the target variable, less the ignored features).</p>
+<section id="id24">
+<h2>Parameters<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>df<span class="classifier">pd.DataFrame</span></dt><dd><p>Input DataFrame whose size is used to compute credits.</p>
+</dd>
+<dt>columns_names_to_btypes: dict</dt><dd><p>The dict that specifies how to handle the variables.</p>
+</dd>
+</dl>
+</section>
+<section id="id25">
+<h2>Returns<a class="headerlink" href="#id25" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>int</dt><dd><p>The computed number of credits consumed.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.request_cloud_credits_infos">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">request_cloud_credits_infos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">computing_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d_out_credits_infos</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_file_service_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">60</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#insightsolver.api_utilities.request_cloud_credits_infos" title="Link to this definition">#</a></dt>
+<dd><p>Send a dict that specifies which infos about the credits are asked for.</p>
+<section id="id26">
+<h2>Parameters<a class="headerlink" href="#id26" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>computing_source<span class="classifier">str</span></dt><dd><p>Where the server is.</p>
+</dd>
+<dt>d_out_credits_infos<span class="classifier">dict</span></dt><dd><p>A dictionary containing the infos about the credits that are asked for. The dictionary format is:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">private_key_id</span></code>: private_key_id of the service_key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_email</span></code>: Email of the user.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">do_compute_credits_available</span></code>: A boolean that specifies where the number of credits available is requested.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">do_compute_df_credits_infos</span></code>: A boolean that specifies if a DataFrame containing all credits transactions is asked for.</p></li>
+</ul>
+</dd>
+<dt>input_file_service_key<span class="classifier">optional</span></dt><dd><p>The client’s service key, needed if the server is remote.
+Default is <cite>None</cite>.</p>
+</dd>
+<dt>timeout<span class="classifier">int, optional</span></dt><dd><p>The timeout duration for the request, in seconds. Default is 60 seconds, as this operation is 
+typically fast and does not involve computation.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.request_cloud_public_keys">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">request_cloud_public_keys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">computing_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d_client_public_keys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_file_service_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">60</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#insightsolver.api_utilities.request_cloud_public_keys" title="Link to this definition">#</a></dt>
+<dd><p>Send the client’s public keys to the server and receive the server’s public keys in response.</p>
+<p>This function establishes a secure connection to the specified server (<code class="docutils literal notranslate"><span class="pre">computing_source</span></code>) and sends 
+the client’s public keys (<code class="docutils literal notranslate"><span class="pre">d_client_public_keys</span></code>). The server responds with its own set of public keys, 
+which are returned in a dictionary format.</p>
+<section id="id27">
+<h2>Parameters<a class="headerlink" href="#id27" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>computing_source<span class="classifier">str</span></dt><dd><p>Where the server is.</p>
+</dd>
+<dt>d_client_public_keys<span class="classifier">dict</span></dt><dd><p>A dictionary containing the client’s public keys to be sent to the server. The dictionary format is:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">alice_rsa_public_key_pem_base64</span></code>: Client’s RSA public key, encoded in base64.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">alice_ecdsa_public_key_pem_base64</span></code>: Client’s ECDSA public key, encoded in base64.</p></li>
+</ul>
+</dd>
+<dt>input_file_service_key<span class="classifier">optional</span></dt><dd><p>The client’s service key, needed if the server is remote.
+Default is <cite>None</cite>.</p>
+</dd>
+<dt>timeout<span class="classifier">int, optional</span></dt><dd><p>The timeout duration for the request, in seconds. Default is 60 seconds, as this operation is 
+typically fast and does not involve computation.</p>
+</dd>
+</dl>
+</section>
+<section id="id28">
+<h2>Returns<a class="headerlink" href="#id28" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>dict</dt><dd><p>A dictionary containing the server’s public keys and a unique session identifier. The dictionary 
+format is as follows:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">session_id</span></code>: A unique identifier for the session.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bob_rsa_public_key_pem_base64</span></code>: Server’s RSA public key, encoded in base64.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bob_ecdsa_public_key_pem_base64</span></code>: Server’s ECDSA public key, encoded in base64.</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="id29">
+<h2>Example<a class="headerlink" href="#id29" title="Link to this heading">#</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Client&#39;s public keys</span>
+<span class="n">d_client_public_keys</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;alice_rsa_public_key_pem_base64&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;base64-encoded RSA public key&gt;&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;alice_ecdsa_public_key_pem_base64&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;base64-encoded ECDSA public key&gt;&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1"># Request server public keys</span>
+<span class="n">d_server_public_keys</span> <span class="o">=</span> <span class="n">request_cloud_public_keys</span><span class="p">(</span>
+        <span class="n">computing_source</span><span class="o">=</span><span class="s1">&#39;https://server-address.com&#39;</span><span class="p">,</span>
+        <span class="n">d_client_public_keys</span><span class="o">=</span><span class="n">d_client_public_keys</span><span class="p">,</span>
+        <span class="n">input_file_service_key</span><span class="o">=</span><span class="s1">&#39;client_service_key&#39;</span>
+<span class="p">)</span>
+
+<span class="c1"># Access the session ID and server&#39;s public keys</span>
+<span class="n">session_id</span> <span class="o">=</span> <span class="n">d_server_public_keys</span><span class="p">[</span><span class="s1">&#39;session_id&#39;</span><span class="p">]</span>
+<span class="n">bob_rsa_public_key</span> <span class="o">=</span> <span class="n">d_server_public_keys</span><span class="p">[</span><span class="s1">&#39;bob_rsa_public_key_pem_base64&#39;</span><span class="p">]</span>
+<span class="n">bob_ecdsa_public_key</span> <span class="o">=</span> <span class="n">d_server_public_keys</span><span class="p">[</span><span class="s1">&#39;bob_ecdsa_public_key_pem_base64&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="id30">
+<h2>Raises<a class="headerlink" href="#id30" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>Exception</dt><dd><p>If the request fails or the server does not return the expected keys.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.request_cloud_computation">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">request_cloud_computation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">computing_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d_out_transformed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_file_service_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">600</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#insightsolver.api_utilities.request_cloud_computation" title="Link to this definition">#</a></dt>
+<dd><p>Send the transformed dict to the server for it to compute the rule mining.</p>
+<section id="id31">
+<h2>Parameters<a class="headerlink" href="#id31" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>computing_source<span class="classifier">str</span></dt><dd><p>The computing source.</p>
+</dd>
+<dt>d_out_transformed<span class="classifier">dict</span></dt><dd><p>The transformed dict to send to the server.</p>
+</dd>
+<dt>input_file_service_key<span class="classifier">str, optional</span></dt><dd><p>The client’s service key, needed if the server is remote.
+Default is <cite>None</cite>.</p>
+</dd>
+<dt>timeout<span class="classifier">int, optional</span></dt><dd><p>Timeout for the request, in seconds. Default is 600 seconds, as computation may take longer.</p>
+</dd>
+</dl>
+</section>
+<section id="id32">
+<h2>Returns<a class="headerlink" href="#id32" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>dict</dt><dd><p>The dict that contains the rule mining results.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.api_utilities.search_best_ruleset_from_API_dict">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.api_utilities.</span></span><span class="sig-name descname"><span class="pre">search_best_ruleset_from_API_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d_out_original</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_file_service_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">computing_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'remote_cloud_function'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_compress_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_compute_memory_usage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#insightsolver.api_utilities.search_best_ruleset_from_API_dict" title="Link to this definition">#</a></dt>
+<dd><p>Search for the best ruleset where the computation is done from the server.</p>
+<section id="id33">
+<h2>Parameters<a class="headerlink" href="#id33" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>d_out_original: dict</dt><dd><p>The original dict, pre-transformation, that contains the necessary data for the server to do rule mining.</p>
+</dd>
+<dt>input_file_service_key: str, optional</dt><dd><p>The service key of the client.</p>
+</dd>
+<dt>user_email: str, optional</dt><dd><p>Email of the user (only for use inside a Google Cloud Run container).</p>
+</dd>
+<dt>computing_source: str, optional</dt><dd><p>The computing source.</p>
+</dd>
+<dt>do_compress_data: bool, optional</dt><dd><p>If we want to compress the data to reduce transmission size.</p>
+</dd>
+<dt>do_compute_memory_usage: bool, optional</dt><dd><p>If we want to compute the memory usage.</p>
+</dd>
+<dt>verbose: bool, optional</dt><dd><p>Verbosity.</p>
+</dd>
+</dl>
+</section>
+<section id="id34">
+<h2>Returns<a class="headerlink" href="#id34" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>dict</dt><dd><p>The dict that contain the output of the rule mining from the server.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="insightsolver.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">insightsolver module</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="visualization.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">visualization module</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-provided">Functions provided</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.hash_string"><code class="docutils literal notranslate"><span class="pre">hash_string()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.convert_bytes_to_base64_string"><code class="docutils literal notranslate"><span class="pre">convert_bytes_to_base64_string()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.convert_base64_string_to_bytes"><code class="docutils literal notranslate"><span class="pre">convert_base64_string_to_bytes()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.compress_string"><code class="docutils literal notranslate"><span class="pre">compress_string()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.decompress_string"><code class="docutils literal notranslate"><span class="pre">decompress_string()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.compress_and_encrypt_string"><code class="docutils literal notranslate"><span class="pre">compress_and_encrypt_string()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.decrypt_and_decompress_string"><code class="docutils literal notranslate"><span class="pre">decrypt_and_decompress_string()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.encode_obj"><code class="docutils literal notranslate"><span class="pre">encode_obj()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.convert_dict_to_json_string"><code class="docutils literal notranslate"><span class="pre">convert_dict_to_json_string()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.decode_obj"><code class="docutils literal notranslate"><span class="pre">decode_obj()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.convert_json_string_to_dict"><code class="docutils literal notranslate"><span class="pre">convert_json_string_to_dict()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.transform_dict"><code class="docutils literal notranslate"><span class="pre">transform_dict()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.untransform_dict"><code class="docutils literal notranslate"><span class="pre">untransform_dict()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.generate_keys"><code class="docutils literal notranslate"><span class="pre">generate_keys()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.generate_url_headers"><code class="docutils literal notranslate"><span class="pre">generate_url_headers()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.compute_credits_from_df"><code class="docutils literal notranslate"><span class="pre">compute_credits_from_df()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.request_cloud_credits_infos"><code class="docutils literal notranslate"><span class="pre">request_cloud_credits_infos()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.request_cloud_public_keys"><code class="docutils literal notranslate"><span class="pre">request_cloud_public_keys()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.request_cloud_computation"><code class="docutils literal notranslate"><span class="pre">request_cloud_computation()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.api_utilities.search_best_ruleset_from_API_dict"><code class="docutils literal notranslate"><span class="pre">search_best_ruleset_from_API_dict()</span></code></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Noé Aubin-Cadot
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, InsightSolver.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

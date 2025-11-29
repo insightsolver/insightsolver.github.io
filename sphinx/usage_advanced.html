@@ -1,0 +1,812 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Advanced usage &#8212; InsightSolver API Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=7a62b934"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'usage_advanced';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Modules" href="modules.html" />
+    <link rel="prev" title="Quick Start Example" href="usage_quickstart.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">InsightSolver API Documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="usage.html">Usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="usage_quickstart.html">Quick Start Example</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Advanced usage</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="insightsolver.html">insightsolver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html">api_utilities module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">visualization module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Advanced usage</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conventions">Conventions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes-of-the-solver">Attributes of the solver</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#counting-the-number-of-rules">Counting the number of rules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-the-index-of-the-rules">Getting the index of the rules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exhaustive-dictionary-of-a-given-rule">Exhaustive dictionary of a given rule</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-of-subrules">DataFrame of subrules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-of-features-contributions">DataFrame of features contributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#printing-modes">Printing modes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#column-types">Column types</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="advanced-usage">
+<span id="usage-advanced"></span><h1>Advanced usage<a class="headerlink" href="#advanced-usage" title="Link to this heading">#</a></h1>
+<p>This section provides a deeper look at how to use the InsightSolver API client.</p>
+<p>Let’s revisit the <a class="reference internal" href="usage_quickstart.html#usage-quickstart"><span class="std std-ref">Titanic</span></a> demo.
+Once the <code class="docutils literal notranslate"><span class="pre">solver</span></code> is fitted, we can do more than simply <code class="docutils literal notranslate"><span class="pre">print</span></code> the results.
+This becomes particularly important when integrating the InsightSolver API client into a Python pipeline.</p>
+<section id="conventions">
+<h2>Conventions<a class="headerlink" href="#conventions" title="Link to this heading">#</a></h2>
+<p>In InsightSolver, the parameter <code class="docutils literal notranslate"><span class="pre">target_goal</span></code> specifies the target modality of the target variable for which rules should capture a large number of <code class="docutils literal notranslate"><span class="pre">1</span></code>’s.
+By convention:</p>
+<ul class="simple">
+<li><p>A data point is considered a <code class="docutils literal notranslate"><span class="pre">1</span></code> if it matches the target modality specified by <code class="docutils literal notranslate"><span class="pre">target_goal</span></code>.</p></li>
+<li><p>A data point is considered a <code class="docutils literal notranslate"><span class="pre">0</span></code> otherwise.</p></li>
+</ul>
+<p>It is important to note that these <code class="docutils literal notranslate"><span class="pre">0</span></code>’s and <code class="docutils literal notranslate"><span class="pre">1</span></code>’s are conventions used internally by InsightSolver and should not be confused with the actual values or modalities of the target variable in the dataset.</p>
+<p>For instance, consider the Titanic dataset used in the <a class="reference internal" href="usage_quickstart.html#usage-quickstart"><span class="std std-ref">Titanic</span></a> example:</p>
+<ul class="simple">
+<li><p>Dataset: <code class="docutils literal notranslate"><span class="pre">kaggle_titanic_train.csv</span></code>.</p></li>
+<li><p>Target variable: <code class="docutils literal notranslate"><span class="pre">target_name='Survived'</span></code>.</p></li>
+<li><p>Target modalities: <code class="docutils literal notranslate"><span class="pre">0</span></code> (non-survivor), <code class="docutils literal notranslate"><span class="pre">1</span></code> (survivor).</p></li>
+<li><p>Target goals: either <code class="docutils literal notranslate"><span class="pre">target_goal=0</span></code> (looking for non-survivors) either <code class="docutils literal notranslate"><span class="pre">target_goal=1</span></code> (looking for survivors).</p></li>
+</ul>
+<p>Here, the modalities <code class="docutils literal notranslate"><span class="pre">0</span></code> and <code class="docutils literal notranslate"><span class="pre">1</span></code> are specific to the Titanic dataset and represent whether a passenger survived or not.</p>
+<ul class="simple">
+<li><p>Total passengers: <code class="docutils literal notranslate"><span class="pre">891</span></code> rows.</p></li>
+<li><p>Non-survivors (<code class="docutils literal notranslate"><span class="pre">Survived=0</span></code>): 549 rows.</p></li>
+<li><p>Survivors (<code class="docutils literal notranslate"><span class="pre">Survived=1</span></code>): 342 rows.</p></li>
+</ul>
+<p><strong>Case 1:</strong> Looking for Survivors (<code class="docutils literal notranslate"><span class="pre">target_goal=1</span></code>)</p>
+<p>When the goal is to identify survivors:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">M=891</span></code>: Total population.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">M0=549</span></code>: Number of <code class="docutils literal notranslate"><span class="pre">0</span></code>’s, representing non-survivors (<code class="docutils literal notranslate"><span class="pre">Survived=0</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">M1=342</span></code>: Number of <code class="docutils literal notranslate"><span class="pre">1</span></code>’s, representing survivors (<code class="docutils literal notranslate"><span class="pre">Survived=1</span></code>).</p></li>
+</ul>
+<p><strong>Case 2:</strong> Looking for Non-Survivors (<code class="docutils literal notranslate"><span class="pre">target_goal=0</span></code>)</p>
+<p>When the goal is to identify non-survivors:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">M=891</span></code>: Total population.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">M0=342</span></code>: Number of <code class="docutils literal notranslate"><span class="pre">0</span></code>’s, representing survivors (<code class="docutils literal notranslate"><span class="pre">Survived=1</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">M1=549</span></code>: Number of <code class="docutils literal notranslate"><span class="pre">1</span></code>’s, representing non-survivors (<code class="docutils literal notranslate"><span class="pre">Survived=0</span></code>).</p></li>
+</ul>
+<p>InsightSolver operates under the principle of capturing <code class="docutils literal notranslate"><span class="pre">1</span></code>’s and rejecting <code class="docutils literal notranslate"><span class="pre">0</span></code>’s, regardless of the specific meaning of these values in a given dataset.</p>
+</section>
+<section id="attributes-of-the-solver">
+<h2>Attributes of the solver<a class="headerlink" href="#attributes-of-the-solver" title="Link to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">solver</span></code> object includes several relevant attributes, which are described exhaustively <a class="reference external" href="insightsolver.html">here</a>.
+For now, let’s take a brief look at the most important ones:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">M</span></code>: The total number of points in the population.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">M0</span></code>: The number of points classified as <code class="docutils literal notranslate"><span class="pre">0</span></code> in the population.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">M1</span></code>: The number of points classified as <code class="docutils literal notranslate"><span class="pre">1</span></code> in the population.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rule_mining_results</span></code>: A dictionary containing the results of the rule mining process. Below, we’ll explore methods to access and parse specific aspects of these results.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">benchmark_scores</span></code>: A dictionary containing the best scores obtained on shuffled data. This is useful to compare the scores of the rules found in the real data against the scores of the rules found in random data.</p></li>
+</ul>
+</section>
+<section id="counting-the-number-of-rules">
+<h2>Counting the number of rules<a class="headerlink" href="#counting-the-number-of-rules" title="Link to this heading">#</a></h2>
+<p>To obtain the number of rules found by the solver, we can use the <code class="docutils literal notranslate"><span class="pre">ruleset_count</span></code> method:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">solver</span><span class="o">.</span><span class="n">ruleset_count</span><span class="p">()</span> <span class="c1"># 3</span>
+
+<span class="c1"># 3 rules are found by the solver</span>
+</pre></div>
+</div>
+<p>Each rule in the solver is indexed by an integer, conventionally denoted as <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
+</section>
+<section id="getting-the-index-of-the-rules">
+<h2>Getting the index of the rules<a class="headerlink" href="#getting-the-index-of-the-rules" title="Link to this heading">#</a></h2>
+<p>To retrieve the range of rule indices, we can use the <code class="docutils literal notranslate"><span class="pre">get_range_i</span></code> method:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">solver</span><span class="o">.</span><span class="n">get_range_i</span><span class="p">()</span> <span class="c1"># [0, 1, 2]</span>
+</pre></div>
+</div>
+<p>This shows that the index <code class="docutils literal notranslate"><span class="pre">i</span></code> can take the values <code class="docutils literal notranslate"><span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span></code> or <code class="docutils literal notranslate"><span class="pre">2</span></code>.
+Knowing this range is useful when iterating over individual rules in the solver.</p>
+</section>
+<section id="exhaustive-dictionary-of-a-given-rule">
+<h2>Exhaustive dictionary of a given rule<a class="headerlink" href="#exhaustive-dictionary-of-a-given-rule" title="Link to this heading">#</a></h2>
+<p>Let’s take a closer look at the rule at position <code class="docutils literal notranslate"><span class="pre">i=0</span></code>.
+We can retrieve an exhaustive dictionary of the rule at position <code class="docutils literal notranslate"><span class="pre">i=0</span></code> as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>     <span class="n">solver</span><span class="o">.</span><span class="n">i_to_rule</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># {</span>
+<span class="c1">#     &quot;m&quot;: 170,</span>
+<span class="c1">#     &quot;m0&quot;: 9,</span>
+<span class="c1">#     &quot;m1&quot;: 161,</span>
+<span class="c1">#     &quot;coverage&quot;: 0.19079685746352412,</span>
+<span class="c1">#     &quot;m1/M1&quot;: 0.47076023391812866,</span>
+<span class="c1">#     &quot;mu_rule&quot;: 0.9470588235294117,</span>
+<span class="c1">#     &quot;mu_pop&quot;: 0.3838383838383838,</span>
+<span class="c1">#     &quot;sigma_pop&quot;: 0.48659245426485753,</span>
+<span class="c1">#     &quot;lift&quot;: 2.4673374613003096,</span>
+<span class="c1">#     &quot;p_value&quot;: 1.925558554763681e-67,</span>
+<span class="c1">#     &quot;F_score&quot;: 0.62890625,</span>
+<span class="c1">#     &quot;Z_score&quot;: 16.767366956025956,</span>
+<span class="c1">#     &quot;rule_S&quot;: {</span>
+<span class="c1">#         &quot;Sex&quot;: &quot;female&quot;,</span>
+<span class="c1">#         &quot;Pclass&quot;: [</span>
+<span class="c1">#             1,</span>
+<span class="c1">#             2</span>
+<span class="c1">#         ]</span>
+<span class="c1">#     },</span>
+<span class="c1">#     &quot;complexity_S&quot;: 2,</span>
+<span class="c1">#     &quot;F1_pop&quot;: 0.5547445255474452,</span>
+<span class="c1">#     &quot;G_bad_class&quot;: 0.17059483726150393,</span>
+<span class="c1">#     &quot;G_information&quot;: 0.24588549145241542,</span>
+<span class="c1">#     &quot;G_gini&quot;: 0.14958927829841417,</span>
+<span class="c1">#     &quot;p_value_ratio_S&quot;: {</span>
+<span class="c1">#         &quot;Pclass&quot;: 5.359920512293736e-08,</span>
+<span class="c1">#         &quot;Name&quot;: 1.0,</span>
+<span class="c1">#         &quot;Sex&quot;: 5.022554571114061e-46,</span>
+<span class="c1">#         &quot;Age&quot;: 1.0,</span>
+<span class="c1">#         &quot;SibSp&quot;: 1.0,</span>
+<span class="c1">#         &quot;Parch&quot;: 1.0,</span>
+<span class="c1">#         &quot;Ticket&quot;: 1.0,</span>
+<span class="c1">#         &quot;Fare&quot;: 1.0,</span>
+<span class="c1">#         &quot;Cabin&quot;: 1.0,</span>
+<span class="c1">#         &quot;Embarked&quot;: 1.0</span>
+<span class="c1">#     },</span>
+<span class="c1">#     &quot;F_score_ratio_S&quot;: {</span>
+<span class="c1">#         &quot;Pclass&quot;: 1.2812499999999998,</span>
+<span class="c1">#         &quot;Name&quot;: 1.0,</span>
+<span class="c1">#         &quot;Sex&quot;: 0.9302417652027029,</span>
+<span class="c1">#         &quot;Age&quot;: 1.0,</span>
+<span class="c1">#         &quot;SibSp&quot;: 1.0,</span>
+<span class="c1">#         &quot;Parch&quot;: 1.0,</span>
+<span class="c1">#         &quot;Ticket&quot;: 1.0,</span>
+<span class="c1">#         &quot;Fare&quot;: 1.0,</span>
+<span class="c1">#         &quot;Cabin&quot;: 1.0,</span>
+<span class="c1">#         &quot;Embarked&quot;: 1.0</span>
+<span class="c1">#     },</span>
+<span class="c1">#     &quot;subrules_S&quot;: [</span>
+<span class="c1">#         {</span>
+<span class="c1">#             &quot;M&quot;: 891,</span>
+<span class="c1">#             &quot;M0&quot;: 549,</span>
+<span class="c1">#             &quot;M1&quot;: 342,</span>
+<span class="c1">#             &quot;mu_pop&quot;: 0.3838383838383838,</span>
+<span class="c1">#             &quot;sigma_pop&quot;: 0.48659245426485753,</span>
+<span class="c1">#             &quot;F1_pop&quot;: 0.5547445255474452,</span>
+<span class="c1">#             &quot;m&quot;: 314,</span>
+<span class="c1">#             &quot;m0&quot;: 81,</span>
+<span class="c1">#             &quot;m1&quot;: 233,</span>
+<span class="c1">#             &quot;coverage&quot;: 0.35241301907968575,</span>
+<span class="c1">#             &quot;m1/M1&quot;: 0.6812865497076024,</span>
+<span class="c1">#             &quot;mu_rule&quot;: 0.7420382165605095,</span>
+<span class="c1">#             &quot;lift&quot;: 1.9332048273550118,</span>
+<span class="c1">#             &quot;mc&quot;: 577,</span>
+<span class="c1">#             &quot;m0c&quot;: 468,</span>
+<span class="c1">#             &quot;m1c&quot;: 109,</span>
+<span class="c1">#             &quot;p_value&quot;: 3.592513266469419e-60,</span>
+<span class="c1">#             &quot;F_score&quot;: 0.7103658536585366,</span>
+<span class="c1">#             &quot;Z_score&quot;: 16.20063097451895,</span>
+<span class="c1">#             &quot;G_bad_class&quot;: 0.17059483726150393,</span>
+<span class="c1">#             &quot;G_information&quot;: 0.21766010666061436,</span>
+<span class="c1">#             &quot;G_gini&quot;: 0.13964795747285225,</span>
+<span class="c1">#             &quot;complexity&quot;: 1,</span>
+<span class="c1">#             &quot;subrule_S&quot;: {</span>
+<span class="c1">#                 &quot;Sex&quot;: &quot;female&quot;</span>
+<span class="c1">#             },</span>
+<span class="c1">#             &quot;var_name&quot;: &quot;Sex&quot;,</span>
+<span class="c1">#             &quot;var_rule&quot;: &quot;female&quot;,</span>
+<span class="c1">#             &quot;p_value_ratio&quot;: 5.022554571114061e-46,</span>
+<span class="c1">#             &quot;shuffling_scores&quot;: {</span>
+<span class="c1">#                 &quot;p_value&quot;: {</span>
+<span class="c1">#                     &quot;cohen_d&quot;: 75.86463627446636,</span>
+<span class="c1">#                     &quot;effect_size&quot;: &quot;6. huge&quot;,</span>
+<span class="c1">#                     &quot;wy_ratio&quot;: 0.0</span>
+<span class="c1">#                 },</span>
+<span class="c1">#                 &quot;Z_score&quot;: {</span>
+<span class="c1">#                     &quot;cohen_d&quot;: 37.71820414056423,</span>
+<span class="c1">#                     &quot;effect_size&quot;: &quot;6. huge&quot;,</span>
+<span class="c1">#                     &quot;wy_ratio&quot;: 0.0</span>
+<span class="c1">#                 },</span>
+<span class="c1">#                 &quot;F_score&quot;: {</span>
+<span class="c1">#                     &quot;cohen_d&quot;: 51.16755087975539,</span>
+<span class="c1">#                     &quot;effect_size&quot;: &quot;6. huge&quot;,</span>
+<span class="c1">#                     &quot;wy_ratio&quot;: 0.0</span>
+<span class="c1">#                 }</span>
+<span class="c1">#             }</span>
+<span class="c1">#         },</span>
+<span class="c1">#         {</span>
+<span class="c1">#             &quot;M&quot;: 891,</span>
+<span class="c1">#             &quot;M0&quot;: 549,</span>
+<span class="c1">#             &quot;M1&quot;: 342,</span>
+<span class="c1">#             &quot;mu_pop&quot;: 0.3838383838383838,</span>
+<span class="c1">#             &quot;sigma_pop&quot;: 0.48659245426485753,</span>
+<span class="c1">#             &quot;F1_pop&quot;: 0.5547445255474452,</span>
+<span class="c1">#             &quot;m&quot;: 170,</span>
+<span class="c1">#             &quot;m0&quot;: 9,</span>
+<span class="c1">#             &quot;m1&quot;: 161,</span>
+<span class="c1">#             &quot;coverage&quot;: 0.19079685746352412,</span>
+<span class="c1">#             &quot;m1/M1&quot;: 0.47076023391812866,</span>
+<span class="c1">#             &quot;mu_rule&quot;: 0.9470588235294117,</span>
+<span class="c1">#             &quot;lift&quot;: 2.4673374613003096,</span>
+<span class="c1">#             &quot;mc&quot;: 721,</span>
+<span class="c1">#             &quot;m0c&quot;: 540,</span>
+<span class="c1">#             &quot;m1c&quot;: 181,</span>
+<span class="c1">#             &quot;p_value&quot;: 1.925558554763681e-67,</span>
+<span class="c1">#             &quot;F_score&quot;: 0.62890625,</span>
+<span class="c1">#             &quot;Z_score&quot;: 16.767366956025956,</span>
+<span class="c1">#             &quot;G_bad_class&quot;: 0.17059483726150393,</span>
+<span class="c1">#             &quot;G_information&quot;: 0.24588549145241542,</span>
+<span class="c1">#             &quot;G_gini&quot;: 0.14958927829841417,</span>
+<span class="c1">#             &quot;complexity&quot;: 2,</span>
+<span class="c1">#             &quot;subrule_S&quot;: {</span>
+<span class="c1">#                 &quot;Sex&quot;: &quot;female&quot;,</span>
+<span class="c1">#                 &quot;Pclass&quot;: [</span>
+<span class="c1">#                     1,</span>
+<span class="c1">#                     2</span>
+<span class="c1">#                 ]</span>
+<span class="c1">#             },</span>
+<span class="c1">#             &quot;var_name&quot;: &quot;Pclass&quot;,</span>
+<span class="c1">#             &quot;var_rule&quot;: [</span>
+<span class="c1">#                 1,</span>
+<span class="c1">#                 2</span>
+<span class="c1">#             ],</span>
+<span class="c1">#             &quot;p_value_ratio&quot;: 5.359920512293736e-08,</span>
+<span class="c1">#             &quot;shuffling_scores&quot;: {</span>
+<span class="c1">#                 &quot;p_value&quot;: {</span>
+<span class="c1">#                     &quot;cohen_d&quot;: 85.9832032893128,</span>
+<span class="c1">#                     &quot;effect_size&quot;: &quot;6. huge&quot;,</span>
+<span class="c1">#                     &quot;wy_ratio&quot;: 0.0</span>
+<span class="c1">#                 },</span>
+<span class="c1">#                 &quot;Z_score&quot;: {</span>
+<span class="c1">#                     &quot;cohen_d&quot;: 39.52974355288319,</span>
+<span class="c1">#                     &quot;effect_size&quot;: &quot;6. huge&quot;,</span>
+<span class="c1">#                     &quot;wy_ratio&quot;: 0.0</span>
+<span class="c1">#                 },</span>
+<span class="c1">#                 &quot;F_score&quot;: {</span>
+<span class="c1">#                     &quot;cohen_d&quot;: 23.36359433204899,</span>
+<span class="c1">#                     &quot;effect_size&quot;: &quot;6. huge&quot;,</span>
+<span class="c1">#                     &quot;wy_ratio&quot;: 0.0</span>
+<span class="c1">#                 }</span>
+<span class="c1">#             }</span>
+<span class="c1">#         }</span>
+<span class="c1">#     ],</span>
+<span class="c1">#     &quot;feature_contributions_S&quot;: {</span>
+<span class="c1">#         &quot;rule_S&quot;: {</span>
+<span class="c1">#             &quot;Sex&quot;: &quot;female&quot;,</span>
+<span class="c1">#             &quot;Pclass&quot;: &quot;[1, 2]&quot;</span>
+<span class="c1">#         },</span>
+<span class="c1">#         &quot;p_value_contribution&quot;: {</span>
+<span class="c1">#             &quot;Sex&quot;: 0.8616919700920942,</span>
+<span class="c1">#             &quot;Pclass&quot;: 0.13830802990790583</span>
+<span class="c1">#         },</span>
+<span class="c1">#         &quot;F_score_contribution&quot;: {</span>
+<span class="c1">#             &quot;Sex&quot;: 1.0,</span>
+<span class="c1">#             &quot;Pclass&quot;: 0.0</span>
+<span class="c1">#         },</span>
+<span class="c1">#         &quot;Z_score_contribution&quot;: {</span>
+<span class="c1">#             &quot;Sex&quot;: 0.9417181496074654,</span>
+<span class="c1">#             &quot;Pclass&quot;: 0.05828185039253464</span>
+<span class="c1">#         },</span>
+<span class="c1">#         &quot;G_bad_class_contribution&quot;: {</span>
+<span class="c1">#             &quot;Sex&quot;: 1.0,</span>
+<span class="c1">#             &quot;Pclass&quot;: 0.0</span>
+<span class="c1">#         },</span>
+<span class="c1">#         &quot;G_information_contribution&quot;: {</span>
+<span class="c1">#             &quot;Sex&quot;: 0.857675593215252,</span>
+<span class="c1">#             &quot;Pclass&quot;: 0.142324406784748</span>
+<span class="c1">#         },</span>
+<span class="c1">#         &quot;G_gini_contribution&quot;: {</span>
+<span class="c1">#             &quot;Sex&quot;: 0.9099458875412633,</span>
+<span class="c1">#             &quot;Pclass&quot;: 0.0900541124587367</span>
+<span class="c1">#         }</span>
+<span class="c1">#     },</span>
+<span class="c1">#     &quot;shuffling_scores&quot;: {</span>
+<span class="c1">#         &quot;p_value&quot;: {</span>
+<span class="c1">#             &quot;cohen_d&quot;: 85.9832032893128,</span>
+<span class="c1">#             &quot;effect_size&quot;: &quot;6. huge&quot;,</span>
+<span class="c1">#             &quot;wy_ratio&quot;: 0.0</span>
+<span class="c1">#         },</span>
+<span class="c1">#         &quot;Z_score&quot;: {</span>
+<span class="c1">#             &quot;cohen_d&quot;: 39.52974355288319,</span>
+<span class="c1">#             &quot;effect_size&quot;: &quot;6. huge&quot;,</span>
+<span class="c1">#             &quot;wy_ratio&quot;: 0.0</span>
+<span class="c1">#         },</span>
+<span class="c1">#         &quot;F_score&quot;: {</span>
+<span class="c1">#             &quot;cohen_d&quot;: 23.36359433204899,</span>
+<span class="c1">#             &quot;effect_size&quot;: &quot;6. huge&quot;,</span>
+<span class="c1">#             &quot;wy_ratio&quot;: 0.0</span>
+<span class="c1">#         }</span>
+<span class="c1">#     }</span>
+<span class="c1"># }</span>
+</pre></div>
+</div>
+<p>This dictionary contains detailed information and statistics about the rule at position <code class="docutils literal notranslate"><span class="pre">i=0</span></code>.
+Here are some of the key entries:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;m&quot;:</span> <span class="pre">170</span></code>: This is the number of points captured by the rule. The rule contains 170 points in total.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;m0&quot;:</span> <span class="pre">9</span></code>: This is the number of <code class="docutils literal notranslate"><span class="pre">0</span></code> captured by the rule. The rule contains 9 non-survivors.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;m1&quot;:</span> <span class="pre">161</span></code>: This is the number of <code class="docutils literal notranslate"><span class="pre">1</span></code> captured by the rule. The rule contains 161 survivors.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;coverage&quot;:</span> <span class="pre">0.19079685746352412</span></code>: This is the coverage of the rule, i.e. the ratio <code class="docutils literal notranslate"><span class="pre">m/M</span></code>. The rule covers 19.1% of the population.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;m1/M1&quot;:</span> <span class="pre">0.47076023391812866</span></code>: This is the sensitivity of the rule, i.e. the capture rate of <code class="docutils literal notranslate"><span class="pre">1</span></code>. The rule captures 47.1% of the survivors.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;mu_rule&quot;:</span> <span class="pre">0.9470588235294117</span></code>: This is the average of the target variable in the rule, i.e. the ratio <code class="docutils literal notranslate"><span class="pre">m1/m</span></code>. Here we have a survival rate of 94.7% in the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;mu_pop&quot;:</span> <span class="pre">0.3838383838383838</span></code>: This the average of the target variable in the population, i.e. the ration <code class="docutils literal notranslate"><span class="pre">M1/M</span></code>. Here we have a survival rate of 38.4% in the population.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;sigma_pop&quot;:</span> <span class="pre">0.48659245426485753</span></code>: This is the standard deviation of the target variable in the population.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;lift&quot;:</span> <span class="pre">2.4673374613003096</span></code>: This is the lift of the rule, i.e. the ratio <code class="docutils literal notranslate"><span class="pre">mu_rule/mu_pop</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;p_value&quot;:</span> <span class="pre">1.925558554763681e-67</span></code>: This is the p-value (according to the hypergeometric probability law, not the chi-squared) of the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;F_score&quot;:</span> <span class="pre">0.62890625</span></code>: This is the F1-score of the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;Z_score&quot;:</span> <span class="pre">16.767366956025956</span></code>: This is the Z-score of the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;rule_S&quot;:</span> <span class="pre">{&quot;Sex&quot;:</span> <span class="pre">&quot;female&quot;,&quot;Pclass&quot;:</span> <span class="pre">[1,2]}</span></code>: The rule reads <em>Females in first or second class.</em></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;complexity_S&quot;:</span> <span class="pre">2</span></code>: The complexity of the rule is 2, i.e. two variables are involded in the rule (<code class="docutils literal notranslate"><span class="pre">&quot;Sex&quot;</span></code> and <code class="docutils literal notranslate"><span class="pre">&quot;Pclass&quot;</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;F1_pop&quot;:</span> <span class="pre">0.5547445255474452</span></code>: This is the F1-score of the population.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;G_bad_class&quot;:</span> <span class="pre">0.17059483726150393</span></code>: This is the bad classification gain of the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;G_information&quot;:</span> <span class="pre">0.24588549145241542</span></code>: This is the information gain of the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;G_gini&quot;:</span> <span class="pre">0.14958927829841417</span></code>: This is the Gini gain of the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;shuffling_scores&quot;</span></code>: This contains the scores that measure how strong is the rule compared to what would be found in shuffled data.</p></li>
+</ul>
+</section>
+<section id="dataframe-of-subrules">
+<h2>DataFrame of subrules<a class="headerlink" href="#dataframe-of-subrules" title="Link to this heading">#</a></h2>
+<p>We can retrieve a DataFrame of the subrules for the rule at position <code class="docutils literal notranslate"><span class="pre">i=0</span></code> as follow:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>     <span class="n">solver</span><span class="o">.</span><span class="n">i_to_subrules_dataframe</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1">#    p_value_ratio variable    rule  complexity       p_value   F_score  ...  m0c  m1c  G_bad_class  G_information    G_gini            subrule_S</span>
+<span class="c1"># 0   5.022555e-46      Sex  female           1  3.592513e-60  0.710366  ...  468  109     0.170595       0.217660  0.139648    {&#39;Sex&#39;: &#39;female&#39;}</span>
+<span class="c1"># 1   5.359921e-08   Pclass  [1, 2]           2  1.925559e-67  0.628906  ...  540  181     0.170595       0.245885  0.149589  {&#39;Sex&#39;: &#39;female&#39;...</span>
+</pre></div>
+</div>
+<p>The DataFrame of subrules begins with a rule of complexity 1 (e.g. <code class="docutils literal notranslate"><span class="pre">{&quot;Sex&quot;:</span> <span class="pre">&quot;female&quot;}</span></code>) and progresses to higher complexities, such as complexity 2 (e.g. <code class="docutils literal notranslate"><span class="pre">{&quot;Sex&quot;:</span> <span class="pre">&quot;female&quot;,&quot;Pclass&quot;:</span> <span class="pre">[1,2]}</span></code>).
+As we can observe, increasing the complexity from 1 to 2 improves the p-values and the information gain but degrades the F1-score.</p>
+<p>The purpose of the subrules DataFrame is to assist in deciding the optimal level of rule complexity based on various metrics.</p>
+</section>
+<section id="dataframe-of-features-contributions">
+<h2>DataFrame of features contributions<a class="headerlink" href="#dataframe-of-features-contributions" title="Link to this heading">#</a></h2>
+<p>We can retrieve a DataFrame showing the contributions of the features for the rule at position <code class="docutils literal notranslate"><span class="pre">i=0</span></code> as follows:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>     <span class="n">solver</span><span class="o">.</span><span class="n">i_to_feature_contributions_S</span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1">#                p_value  F_score   Z_score  G_bad_class  G_information    G_gini</span>
+<span class="c1"># feature_name</span>
+<span class="c1"># Sex           0.861692      1.0  0.941718          1.0       0.857676  0.909946</span>
+<span class="c1"># Pclass        0.138308      0.0  0.058282          0.0       0.142324  0.090054</span>
+</pre></div>
+</div>
+<p>As we can observe, the variable <code class="docutils literal notranslate"><span class="pre">&quot;Sex&quot;</span></code> provides the largest contribution.
+The variable <code class="docutils literal notranslate"><span class="pre">&quot;Pclass&quot;</span></code> adds a slight positive contribution to both the p-value and the information gain, as including it in the rule improves these metrics.
+However,  the contribution of <code class="docutils literal notranslate"><span class="pre">&quot;Pclass&quot;</span></code> is zero for the F-score.
+This indicates that it does not enhance the F-score (in fact, it degrades it, but by convention, contributions are kept nonnegative).</p>
+</section>
+<section id="printing-modes">
+<h2>Printing modes<a class="headerlink" href="#printing-modes" title="Link to this heading">#</a></h2>
+<p>Earlier in <a class="reference internal" href="usage_quickstart.html#usage-quickstart"><span class="std std-ref">Titanic</span></a> we saw the <code class="docutils literal notranslate"><span class="pre">dense</span></code> printing mode.
+There are three printing modes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">full</span></code>: A full print of the results.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">light</span></code>: A lighter version of the full print.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dense</span></code>: A very compact version of the print.</p></li>
+</ul>
+</section>
+<section id="column-types">
+<h2>Column types<a class="headerlink" href="#column-types" title="Link to this heading">#</a></h2>
+<p>The columns of a Pandas DataFrame are associated with a type known as a <em>dtype</em>, such as <code class="docutils literal notranslate"><span class="pre">int64</span></code>, <code class="docutils literal notranslate"><span class="pre">float64</span></code>, <code class="docutils literal notranslate"><span class="pre">object</span></code>, and so on.
+In addition to these, InsightSolver introduces a complementary layer of types called <em>btype</em>.</p>
+<p>While <em>dtypes</em> describe the encoding of the data (e.g., integers or floats), <em>btypes</em> define how the data should be interpreted when mining for rules.
+These <em>btypes</em> include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">binary</span></code>: The variable is treated as a binary categorical variable, and rule mining will focus on finding subsets.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">multiclass</span></code>: The variable is treated as a multiclass categorical variable, and rule mining will aim to find subsets.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">continuous</span></code>: The variable is treated as an ordered variable, and rule mining will focus on identifying meaningful intervals.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ignore</span></code>: The variable is excluded from rule mining.</p></li>
+</ul>
+<p>The <em>btypes</em> of the columns are automatically detected in InsightSolver, so its not mandatory to explicitly specify a <em>btype</em> for each variable.
+However, if the user wishes to specify the <em>btype</em> for some or all variables, this can be done using the <code class="docutils literal notranslate"><span class="pre">columns_types</span></code> dictionary (a key is a column name, a value is a <em>btype</em>).
+The <code class="docutils literal notranslate"><span class="pre">columns_types</span></code> dictionary can be passed as a parameter of the <code class="docutils literal notranslate"><span class="pre">solver</span></code>.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="usage_quickstart.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Quick Start Example</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="modules.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Modules</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conventions">Conventions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#attributes-of-the-solver">Attributes of the solver</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#counting-the-number-of-rules">Counting the number of rules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-the-index-of-the-rules">Getting the index of the rules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exhaustive-dictionary-of-a-given-rule">Exhaustive dictionary of a given rule</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-of-subrules">DataFrame of subrules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dataframe-of-features-contributions">DataFrame of features contributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#printing-modes">Printing modes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#column-types">Column types</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Noé Aubin-Cadot
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, InsightSolver.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

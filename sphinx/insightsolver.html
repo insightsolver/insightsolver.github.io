@@ -1,0 +1,1301 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>insightsolver module &#8212; InsightSolver API Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=7a62b934"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'insightsolver';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="api_utilities module" href="api_utilities.html" />
+    <link rel="prev" title="Modules" href="modules.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">InsightSolver API Documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="usage.html">Usage</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage_quickstart.html">Quick Start Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_advanced.html">Advanced usage</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="modules.html">Modules</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">insightsolver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html">api_utilities module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">visualization module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>insightsolver module</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note">Note</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.compute_admissible_btypes"><code class="docutils literal notranslate"><span class="pre">compute_admissible_btypes()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.compute_columns_names_to_admissible_btypes"><code class="docutils literal notranslate"><span class="pre">compute_columns_names_to_admissible_btypes()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.validate_class_integrity"><code class="docutils literal notranslate"><span class="pre">validate_class_integrity()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.format_value"><code class="docutils literal notranslate"><span class="pre">format_value()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.S_to_index_points_in_rule"><code class="docutils literal notranslate"><span class="pre">S_to_index_points_in_rule()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.resolve_language"><code class="docutils literal notranslate"><span class="pre">resolve_language()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.gain_to_percent"><code class="docutils literal notranslate"><span class="pre">gain_to_percent()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.search_best_ruleset_from_API_public"><code class="docutils literal notranslate"><span class="pre">search_best_ruleset_from_API_public()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.get_credits_available"><code class="docutils literal notranslate"><span class="pre">get_credits_available()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver"><code class="docutils literal notranslate"><span class="pre">InsightSolver</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.__init__"><code class="docutils literal notranslate"><span class="pre">InsightSolver.__init__()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.ingest_dict"><code class="docutils literal notranslate"><span class="pre">InsightSolver.ingest_dict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.ingest_json_string"><code class="docutils literal notranslate"><span class="pre">InsightSolver.ingest_json_string()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.is_fitted"><code class="docutils literal notranslate"><span class="pre">InsightSolver.is_fitted()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.fit"><code class="docutils literal notranslate"><span class="pre">InsightSolver.fit()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.S_to_index_points_in_rule"><code class="docutils literal notranslate"><span class="pre">InsightSolver.S_to_index_points_in_rule()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.S_to_s_points_in_rule"><code class="docutils literal notranslate"><span class="pre">InsightSolver.S_to_s_points_in_rule()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.S_to_df_filtered"><code class="docutils literal notranslate"><span class="pre">InsightSolver.S_to_df_filtered()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.ruleset_count"><code class="docutils literal notranslate"><span class="pre">InsightSolver.ruleset_count()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.i_to_rule"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_rule()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.i_to_S"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_S()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.i_to_subrules_dataframe"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_subrules_dataframe()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.i_to_feature_contributions_S"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_feature_contributions_S()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.i_to_feature_names"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_feature_names()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.i_to_readable_text"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_readable_text()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.i_to_print"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_print()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.get_range_i"><code class="docutils literal notranslate"><span class="pre">InsightSolver.get_range_i()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.print"><code class="docutils literal notranslate"><span class="pre">InsightSolver.print()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.print_light"><code class="docutils literal notranslate"><span class="pre">InsightSolver.print_light()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.print_dense"><code class="docutils literal notranslate"><span class="pre">InsightSolver.print_dense()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.to_dict"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_dict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.to_json_string"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_json_string()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.to_dataframe"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_dataframe()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.to_csv"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_csv()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.to_excel"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_excel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.to_excel_string"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_excel_string()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.get_credits_needed_for_computation"><code class="docutils literal notranslate"><span class="pre">InsightSolver.get_credits_needed_for_computation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.get_df_credits_infos"><code class="docutils literal notranslate"><span class="pre">InsightSolver.get_df_credits_infos()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.get_credits_available"><code class="docutils literal notranslate"><span class="pre">InsightSolver.get_credits_available()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.convert_target_to_binary"><code class="docutils literal notranslate"><span class="pre">InsightSolver.convert_target_to_binary()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.compute_mutual_information"><code class="docutils literal notranslate"><span class="pre">InsightSolver.compute_mutual_information()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.plot"><code class="docutils literal notranslate"><span class="pre">InsightSolver.plot()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.to_pdf"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_pdf()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.to_zip"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_zip()</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="module-insightsolver.insightsolver">
+<span id="insightsolver-module"></span><h1>insightsolver module<a class="headerlink" href="#module-insightsolver.insightsolver" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p><cite>Organization</cite>:  InsightSolver Solutions Inc.</p></li>
+<li><p><cite>Project Name</cite>:  InsightSolver</p></li>
+<li><p><cite>Module Name</cite>:   insightsolver</p></li>
+<li><p><cite>File Name</cite>:     insightsolver.py</p></li>
+<li><p><cite>Author</cite>:        Noé Aubin-Cadot</p></li>
+<li><p><cite>Email</cite>:         <a class="reference external" href="mailto:noe&#46;aubin-cadot&#37;&#52;&#48;insightsolver&#46;com">noe<span>&#46;</span>aubin-cadot<span>&#64;</span>insightsolver<span>&#46;</span>com</a></p></li>
+</ul>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading">#</a></h2>
+<p>This file contains the <code class="docutils literal notranslate"><span class="pre">InsightSolver</span></code> class.
+This class is meant to ingest data, specify rule mining parameters and make rule mining API calls.</p>
+</section>
+<section id="note">
+<h2>Note<a class="headerlink" href="#note" title="Link to this heading">#</a></h2>
+<p>A service key is necessary to use the API client.</p>
+</section>
+<section id="license">
+<h2>License<a class="headerlink" href="#license" title="Link to this heading">#</a></h2>
+<p>Exclusive Use License - see <a class="reference external" href="license.html">LICENSE</a> for details.</p>
+</section>
+<hr class="docutils" />
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.compute_admissible_btypes">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.insightsolver.</span></span><span class="sig-name descname"><span class="pre">compute_admissible_btypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">M</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dtype</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nunique</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#insightsolver.insightsolver.compute_admissible_btypes" title="Link to this definition">#</a></dt>
+<dd><p>This function computes the admissible <cite>btypes</cite> a column can take.
+The <cite>btypes</cite>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">'binary'</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'multiclass'</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'continuous'</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'ignore'</span></code></p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.compute_columns_names_to_admissible_btypes">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.insightsolver.</span></span><span class="sig-name descname"><span class="pre">compute_columns_names_to_admissible_btypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#insightsolver.insightsolver.compute_columns_names_to_admissible_btypes" title="Link to this definition">#</a></dt>
+<dd><p>This function computes a dict that maps the column names of <code class="docutils literal notranslate"><span class="pre">df</span></code> to lists of admissible btypes.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.validate_class_integrity">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.insightsolver.</span></span><span class="sig-name descname"><span class="pre">validate_class_integrity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_goal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Real</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">uint8</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns_types</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns_descr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold_M_max</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">specified_constraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_N_rules</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filtering_score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_benchmark_original</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_benchmark_shuffle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_strict_types</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.validate_class_integrity" title="Link to this definition">#</a></dt>
+<dd><p>This function validates the integrity of the parameter values passed during the instantiation of the InsightSolver class.</p>
+<section id="parameters">
+<h2>Parameters<a class="headerlink" href="#parameters" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>df: DataFrame</dt><dd><p>The DataFrame that contains the data to analyse (a target column and various feature columns).</p>
+</dd>
+<dt>target_name: str</dt><dd><p>Name of the column of the target variable.</p>
+</dd>
+<dt>target_goal: str (or other modality of the target variable)</dt><dd><p>Target goal.</p>
+</dd>
+<dt>columns_types: dict</dt><dd><p>Types of the columns.</p>
+</dd>
+<dt>columns_descr: dict</dt><dd><p>Descriptions of the columns.</p>
+</dd>
+<dt>threshold_M_max: int</dt><dd><p>Threshold on the maximum number of observations to consider, above which we sample observations.</p>
+</dd>
+<dt>specified_constraints: dict</dt><dd><p>Dictionary of the specified constraints on m_min, m_max, coverage_min, coverage_max.</p>
+</dd>
+<dt>top_N_rules: int</dt><dd><p>An integer that specifies the maximum number of rules to get from the rule mining.</p>
+</dd>
+<dt>filtering_score: str</dt><dd><p>A string that specifies the filtering score to be used when selecting rules.</p>
+</dd>
+<dt>n_benchmark_original: int</dt><dd><p>An integer that specifies the number of benchmarking runs to execute where the target is not shuffled.</p>
+</dd>
+<dt>n_benchmark_shuffle: int</dt><dd><p>An integer that specifies the number of benchmarking runs to execute where the target is shuffled.</p>
+</dd>
+<dt>do_strict_types: bool (default False)</dt><dd><p>A boolean that specifies if we want a strict evaluation of types.</p>
+</dd>
+<dt>verbose: bool (default False)</dt><dd><p>Verbosity.</p>
+</dd>
+</dl>
+</section>
+<section id="returns">
+<h2>Returns<a class="headerlink" href="#returns" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>columns_types: dict</dt><dd><p>A dict of the columns types after adjusting the types.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.format_value">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.insightsolver.</span></span><span class="sig-name descname"><span class="pre">format_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">format_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'scientific'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decimals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#insightsolver.insightsolver.format_value" title="Link to this definition">#</a></dt>
+<dd><p>This function formats values depending on the type of values (<code class="docutils literal notranslate"><span class="pre">float</span></code> or <code class="docutils literal notranslate"><span class="pre">mpmath</span></code>) and the type of the format to show:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">'percentage'</span></code>: shows the values as percentage (default).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'scientific'</span></code>: shows the values in scientific notation with 4 decimals.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'scientific_no_decimals'</span></code>: shows the values in scientific notation without decimals.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.S_to_index_points_in_rule">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.insightsolver.</span></span><span class="sig-name descname"><span class="pre">S_to_index_points_in_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">S</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Index</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.S_to_index_points_in_rule" title="Link to this definition">#</a></dt>
+<dd><p>This function takes a rule <code class="docutils literal notranslate"><span class="pre">S</span></code> and returns the index of the points inside the rule of a DataFrame.
+If no DataFrame is provided, the one used to train the solver is used.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.resolve_language">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.insightsolver.</span></span><span class="sig-name descname"><span class="pre">resolve_language</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'english'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.resolve_language" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.gain_to_percent">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.insightsolver.</span></span><span class="sig-name descname"><span class="pre">gain_to_percent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gain</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">decimals</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.gain_to_percent" title="Link to this definition">#</a></dt>
+<dd><p>This function formats the gain to either a positive percentage or a negative percentage.</p>
+<section id="id2">
+<h2>Parameters<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>gain: float</dt><dd><p>The gain (gain = lift - 1).</p>
+</dd>
+<dt>decimals: int</dt><dd><p>Number of decimals to show.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.search_best_ruleset_from_API_public">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.insightsolver.</span></span><span class="sig-name descname"><span class="pre">search_best_ruleset_from_API_public</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">computing_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_file_service_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_goal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Real</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">uint8</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns_names_to_btypes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns_names_to_descr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold_M_max</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">specified_constraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_N_rules</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filtering_score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_compress_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_compute_memory_usage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_benchmark_original</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_benchmark_shuffle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">20</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_llm_readable_rules</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">llm_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'remote_gemini'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">llm_language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_store_llm_cache</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_check_llm_cache</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.search_best_ruleset_from_API_public" title="Link to this definition">#</a></dt>
+<dd><p>This function is meant to make a rule mining API call.</p>
+<section id="id3">
+<h2>Parameters<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>df: DataFrame</dt><dd><p>The DataFrame that contains the data to analyse (a target column and various feature columns).</p>
+</dd>
+<dt>computing_source: str</dt><dd><p>If the rule mining should be computed locally or remotely.</p>
+</dd>
+<dt>input_file_service_key: str</dt><dd><p>The string that specifies the path to the service key (necessary to use the remote Cloud Function from outside GCP).</p>
+</dd>
+<dt>user_email: str</dt><dd><p>The email of the user (necessary to use the remote Cloud Function from inside GCP).</p>
+</dd>
+<dt>target_name: str</dt><dd><p>Name of the column of the target variable.</p>
+</dd>
+<dt>target_goal: str (or other modality of the target variable)</dt><dd><p>Target goal.</p>
+</dd>
+<dt>columns_names_to_btypes: dict</dt><dd><p>A dict that specifies the btypes of the columns.</p>
+</dd>
+<dt>columns_names_to_descr: dict</dt><dd><p>A dict that specifies the descriptions of the columns.</p>
+</dd>
+<dt>threshold_M_max: int</dt><dd><p>Threshold on the maximum number of points to use during the rule mining (max. 10000 pts in the public API).</p>
+</dd>
+<dt>specified_constraints: dict</dt><dd><p>A dict that specifies contraints to be used during the rule mining.</p>
+</dd>
+<dt>top_N_rules: int</dt><dd><p>An integer that specifies the maximum number of rules to get from the rule mining.</p>
+</dd>
+<dt>verbose: bool</dt><dd><p>Verbosity.</p>
+</dd>
+<dt>filtering_score: str</dt><dd><p>A string that specifies the filtering score to be used when selecting rules.</p>
+</dd>
+<dt>api_source: str</dt><dd><p>A string used to identify the source of the API call.</p>
+</dd>
+<dt>do_compress_data: bool</dt><dd><p>A boolean that specifies if we want to compress the data.</p>
+</dd>
+<dt>do_compute_memory_usage: bool</dt><dd><p>A bool that specifies if we want to get the memory usage of the computation.</p>
+</dd>
+<dt>n_benchmark_original: int</dt><dd><p>Number of benchmarking runs to execute where the target is not shuffled.</p>
+</dd>
+<dt>n_benchmark_shuffle: int</dt><dd><p>Number of benchmarking runs to execute where the target is shuffled.</p>
+</dd>
+<dt>do_llm_readable_rules: bool</dt><dd><p>If we want to convert the rules to a readable format using a LLM.</p>
+</dd>
+<dt>llm_source: str</dt><dd><p>Source where the LLM is running</p>
+</dd>
+<dt>do_store_llm_cache: bool</dt><dd><p>If we want to store the result of the LLM in the cache (makes futur LLM calls faster).</p>
+</dd>
+<dt>do_check_llm_cache: bool</dt><dd><p>If we want to check if the results of the prompt are found in the cache (makes LLM calls faster).</p>
+</dd>
+</dl>
+</section>
+<section id="id4">
+<h2>Returns<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>response: requests.models.Response</dt><dd><p>A response object obtained from the API call that contains the rule mining results.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.get_credits_available">
+<span class="sig-prename descclassname"><span class="pre">insightsolver.insightsolver.</span></span><span class="sig-name descname"><span class="pre">get_credits_available</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">computing_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#insightsolver.insightsolver.get_credits_available" title="Link to this definition">#</a></dt>
+<dd><p>This function is meant to retrieve from the server the amount of credits available.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">insightsolver.insightsolver.</span></span><span class="sig-name descname"><span class="pre">InsightSolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_goal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Real</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">uint8</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns_types</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns_descr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold_M_max</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">specified_constraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_N_rules</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filtering_score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_benchmark_original</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_benchmark_shuffle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Mapping</span></code></p>
+<p>The class <code class="docutils literal notranslate"><span class="pre">InsightSolver</span></code> is meant to :</p>
+<ol class="arabic simple">
+<li><p>Take input data.</p></li>
+<li><p>Make an insightsolver API calls to the server.</p></li>
+<li><p>Present the results of the rule mining.</p></li>
+</ol>
+<section id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>df: DataFrame</dt><dd><p>The DataFrame that contains the data to analyse.</p>
+</dd>
+<dt>target_name: str (default None)</dt><dd><p>Name of the target variable (by default it’s the first column).</p>
+</dd>
+<dt>target_goal: (str or int)</dt><dd><p>Target goal.</p>
+</dd>
+<dt>target_threshold: (int or float)</dt><dd><p>Threshold used to convert a continuous target variable to a binary target variable.</p>
+</dd>
+<dt>M: int</dt><dd><p>Number of points in the population.</p>
+</dd>
+<dt>M0: int</dt><dd><p>Number of points 0 in the population.</p>
+</dd>
+<dt>M1: int</dt><dd><p>Number of points 1 in the population.</p>
+</dd>
+<dt>columns_types: dict</dt><dd><p>Types of the columns.</p>
+</dd>
+<dt>columns_descr: dict</dt><dd><p>Textual descriptions of the columns.</p>
+</dd>
+<dt>other_modalities: dict</dt><dd><p>Modalities that are mapped to the modality ‘other’.</p>
+</dd>
+<dt>threshold_M_max: int (default 10000)</dt><dd><p>Threshold on the maximum number of observations to consider, above which we under sample the observations.</p>
+</dd>
+<dt>specified_constraints: dict</dt><dd><p>Dictionary of the specified constraints on <code class="docutils literal notranslate"><span class="pre">m_min</span></code>, <code class="docutils literal notranslate"><span class="pre">m_max</span></code>, <code class="docutils literal notranslate"><span class="pre">coverage_min</span></code>, <code class="docutils literal notranslate"><span class="pre">coverage_max</span></code>.</p>
+</dd>
+<dt>top_N_rules: int (default 10)</dt><dd><p>An integer that specifies the maximum number of rules to get from the rule mining.</p>
+</dd>
+<dt>filtering_score: str (default ‘auto’)</dt><dd><p>A string that specifies the filtering score to be used when selecting rules.</p>
+</dd>
+<dt>n_benchmark_original: int (default 5)</dt><dd><p>An integer that specifies the number of benchmarking runs to execute where the target is not shuffled.</p>
+</dd>
+<dt>n_benchmark_shuffle: int (default 20)</dt><dd><p>An integer that specifies the number of benchmarking runs to execute where the target is shuffled.</p>
+</dd>
+<dt>monitoring_metadata: dict</dt><dd><p>Dictionary of monitoring metadata.</p>
+</dd>
+<dt>benchmark_scores: dict</dt><dd><p>Dictionary of the benchmarking scores against shuffled data.</p>
+</dd>
+<dt>rule_mining_results: dict</dt><dd><p>Dictionary that contains the results of the rule mining.</p>
+</dd>
+<dt>_is_fitted: bool</dt><dd><p>Boolean that tells if the solver is fitted.</p>
+</dd>
+</dl>
+</section>
+<section id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Link to this heading">#</a></h2>
+<dl class="simple">
+<dt>__init__: None</dt><dd><p>Initialization of an instance of the class InsightSolver.</p>
+</dd>
+<dt>__str__: None</dt><dd><p>Converts the solver to a string as provided by the print method.</p>
+</dd>
+<dt>ingest_dict: None</dt><dd><p>Ingests a Python dict.</p>
+</dd>
+<dt>ingest_json_string: None</dt><dd><p>Ingests a JSON string.</p>
+</dd>
+<dt>is_fitted: Bool</dt><dd><p>Returns a boolean that tells if the solver is fitted.</p>
+</dd>
+<dt>fit: None</dt><dd><p>Fits the solver.</p>
+</dd>
+<dt>S_to_index_points_in_rule: Pandas Index</dt><dd><p>Returns the index of the points in a rule S.</p>
+</dd>
+<dt>S_to_s_points_in_rule: Pandas Series</dt><dd><p>Returns a boolean Pandas Series that tells if the point is in the rule S.</p>
+</dd>
+<dt>S_to_df_filtered: Pandas DataFrame</dt><dd><p>Returns the filtered df of rows that are in the rule S.</p>
+</dd>
+<dt>ruleset_count: int</dt><dd><p>Counts the number of rules held by the InsightSolver.</p>
+</dd>
+<dt>i_to_rule: dict</dt><dd><p>Gives the rule i of the InsightSolver.</p>
+</dd>
+<dt>i_to_S: dict</dt><dd><p>Returns the rule S for the rule at index i.</p>
+</dd>
+<dt>i_to_subrules_dataframe: Pandas DataFrame</dt><dd><p>Returns a DataFrame containing the informations about the subrules of the rule i.</p>
+</dd>
+<dt>i_to_feature_contributions_S: Pandas DataFrame</dt><dd><p>Returns a DataFrame of the feature contributions of the variables in the rule S at position i.</p>
+</dd>
+<dt>i_to_readable_text: str</dt><dd><p>Returns the readable text of the rule i if it is available.</p>
+</dd>
+<dt>i_to_print: None</dt><dd><p>Prints the content of the rule i in the InsightSolver.</p>
+</dd>
+<dt>get_range_i: list</dt><dd><p>Gives the range of i in the InsightSolver.</p>
+</dd>
+<dt>print: None</dt><dd><p>Prints the content of the InsightSolver.</p>
+</dd>
+<dt>print_light: None</dt><dd><p>Prints the content of the InsightSolver (‘light’ mode).</p>
+</dd>
+<dt>print_dense: None</dt><dd><p>Prints the content of the InsightSolver (‘dense’ mode).</p>
+</dd>
+<dt>to_dict: dict</dt><dd><p>Exports the content of the InsightSolver object to a Python dict.</p>
+</dd>
+<dt>to_json_string: str</dt><dd><p>Exports the content of the InsightSolver object to a JSON string.</p>
+</dd>
+<dt>to_dataframe: Pandas DataFrame</dt><dd><p>Exports the rule mining results to a Pandas DataFrame.</p>
+</dd>
+<dt>to_csv: str</dt><dd><p>Exports the rule mining results to a CSV string and/or a local CSV file.</p>
+</dd>
+<dt>to_excel: None</dt><dd><p>Exports the rule mining results to a Excel file.</p>
+</dd>
+<dt>to_excel_string: str</dt><dd><p>Exports the rule mining results to a Excel string.</p>
+</dd>
+<dt>get_credits_needed_for_computation: int</dt><dd><p>Get the number of credits needed for the fitting computation of the solver.</p>
+</dd>
+<dt>get_df_credits_infos: Pandas DataFrame</dt><dd><p>Get a DataFrame of the transactions involving credits.</p>
+</dd>
+<dt>get_credits_available: int</dt><dd><p>Get the number of credits available.</p>
+</dd>
+<dt>convert_target_to_binary: pd.Series</dt><dd><p>Converts the target variable to a binary {0,1}-valued Pandas Series.</p>
+</dd>
+<dt>compute_mutual_information: pd.Series</dt><dd><p>Computes a Pandas Series of the mutual information between features and the target variable.</p>
+</dd>
+<dt>to_pdf: str</dt><dd><p>Generates a PDF containing all visualization figures for the solver.</p>
+</dd>
+<dt>to_zip: str</dt><dd><p>Exports the rule mining results to a ZIP file.</p>
+</dd>
+</dl>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h2>
+<p>Here’s a sample code to use the class <code class="docutils literal notranslate"><span class="pre">InsightSolver</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specify the service key</span>
+<span class="n">service_key</span> <span class="o">=</span> <span class="s1">&#39;name_of_your_service_key.json&#39;</span>
+
+<span class="c1"># Import some data</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;kaggle_titanic_train.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># Specify the name of the target variable</span>
+<span class="n">target_name</span> <span class="o">=</span> <span class="s1">&#39;Survived&#39;</span> <span class="c1"># We are interested in whether the passengers survived or not</span>
+
+<span class="c1"># Specify the target goal</span>
+<span class="n">target_goal</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># We are searching rules that describe survivors</span>
+
+<span class="c1"># Import the class InsightSolver from the module insightsolver</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">insightsolver</span><span class="w"> </span><span class="kn">import</span> <span class="n">InsightSolver</span>
+
+<span class="c1"># Create an instance of the class InsightSolver</span>
+<span class="n">solver</span> <span class="o">=</span> <span class="n">InsightSolver</span><span class="p">(</span>
+    <span class="n">df</span>          <span class="o">=</span> <span class="n">df</span><span class="p">,</span>          <span class="c1"># A dataset</span>
+    <span class="n">target_name</span> <span class="o">=</span> <span class="n">target_name</span><span class="p">,</span> <span class="c1"># Name of the target variable</span>
+    <span class="n">target_goal</span> <span class="o">=</span> <span class="n">target_goal</span><span class="p">,</span> <span class="c1"># Target goal</span>
+<span class="p">)</span>
+
+<span class="c1"># Fit the solver</span>
+<span class="n">solver</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+    <span class="n">service_key</span> <span class="o">=</span> <span class="n">service_key</span><span class="p">,</span> <span class="c1"># Use your API service key here</span>
+<span class="p">)</span>
+
+<span class="c1"># Print the rule mining results</span>
+<span class="n">solver</span><span class="o">.</span><span class="n">print</span><span class="p">()</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_goal</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Real</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">uint8</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns_types</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns_descr</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold_M_max</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">specified_constraints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">{}</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">top_N_rules</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filtering_score</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_benchmark_original</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_benchmark_shuffle</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.__init__" title="Link to this definition">#</a></dt>
+<dd><p>The initialization occurs when an <code class="docutils literal notranslate"><span class="pre">InsightSolver</span></code> class instance is created.</p>
+<section id="id5">
+<h3>Parameters<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>verbose: bool (default False)</dt><dd><p>If we want the initialization to be verbose.</p>
+</dd>
+<dt>df: DataFrame</dt><dd><p>The DataFrame that contains the data to analyse (a target column and various feature columns).</p>
+</dd>
+<dt>target_name: str</dt><dd><p>Name of the column of the target variable.</p>
+</dd>
+<dt>target_goal: str (or other modality of the target variable)</dt><dd><p>Target goal.</p>
+</dd>
+<dt>columns_types: dict</dt><dd><p>Types of the columns.</p>
+</dd>
+<dt>columns_descr: dict</dt><dd><p>Descriptions of the columns.</p>
+</dd>
+<dt>threshold_M_max: int</dt><dd><p>Threshold on the maximum number of observations to consider, above which we sample observations.</p>
+</dd>
+<dt>specified_constraints: dict</dt><dd><p>Dictionary of the specified constraints on m_min, m_max, coverage_min, coverage_max.</p>
+</dd>
+<dt>top_N_rules: int (default 10)</dt><dd><p>An integer that specifies the maximum number of rules to get from the rule mining.</p>
+</dd>
+<dt>filtering_score: str (default ‘auto’)</dt><dd><p>A string that specifies the filtering score to be used when selecting rules.</p>
+</dd>
+<dt>n_benchmark_original: int (default 5)</dt><dd><p>An integer that specifies the number of benchmarking runs to execute where the target is not shuffled.</p>
+</dd>
+<dt>n_benchmark_shuffle: int (default 20)</dt><dd><p>An integer that specifies the number of benchmarking runs to execute where the target is shuffled.</p>
+</dd>
+</dl>
+</section>
+<section id="id6">
+<h3>Returns<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>solver: InsightSolver</dt><dd><p>An instance of the class InsightSolver.</p>
+</dd>
+</dl>
+</section>
+<section id="id7">
+<h3>Example<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Here’s a sample code to instantiante the class <code class="docutils literal notranslate"><span class="pre">InsightSolver</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the class InsightSolver from the module insightsolver</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">insightsolver</span><span class="w"> </span><span class="kn">import</span> <span class="n">InsightSolver</span>
+
+<span class="c1"># Create an instance of the class InsightSolver</span>
+<span class="n">solver</span> <span class="o">=</span> <span class="n">InsightSolver</span><span class="p">(</span>
+    <span class="n">df</span>          <span class="o">=</span> <span class="n">df</span><span class="p">,</span>          <span class="c1"># A Pandas DataFrame</span>
+    <span class="n">target_name</span> <span class="o">=</span> <span class="n">target_name</span><span class="p">,</span> <span class="c1"># Name of the target variable</span>
+    <span class="n">target_goal</span> <span class="o">=</span> <span class="n">target_goal</span><span class="p">,</span> <span class="c1"># Target goal</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.ingest_dict">
+<span class="sig-name descname"><span class="pre">ingest_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.ingest_dict" title="Link to this definition">#</a></dt>
+<dd><p>This method aims to ingest a Python dict in the solver.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.ingest_json_string">
+<span class="sig-name descname"><span class="pre">ingest_json_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_string</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.ingest_json_string" title="Link to this definition">#</a></dt>
+<dd><p>This method aims to ingest a JSON string in the solver.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.is_fitted">
+<span class="sig-name descname"><span class="pre">is_fitted</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.is_fitted" title="Link to this definition">#</a></dt>
+<dd><p>This method returns a boolean that tells if the solver is fitted.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">computing_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_compress_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_compute_memory_usage</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_check_enough_credits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_llm_readable_rules</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">llm_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">llm_language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_store_llm_cache</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_check_llm_cache</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.fit" title="Link to this definition">#</a></dt>
+<dd><p>This method aims to fit the solver.</p>
+<section id="id8">
+<h3>Parameters<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>verbose: bool (default False)</dt><dd><p>If we want the fitting to be verbose.</p>
+</dd>
+<dt>computing_source: str (default ‘auto’)</dt><dd><p>Specify where the rule mining computation is done (‘local_cloud_function’ or ‘remote_cloud_function’).</p>
+</dd>
+<dt>service_key: str (default None)</dt><dd><p>Path+name of the service key.</p>
+</dd>
+<dt>user_email: str (default None)</dt><dd><p>User email.</p>
+</dd>
+<dt>api_source: str (default ‘auto’)</dt><dd><p>Source of the API call.</p>
+</dd>
+<dt>do_compress_data: bool (default True)</dt><dd><p>If we want to compress the data for the communications with the server.</p>
+</dd>
+<dt>do_compute_memory_usage: bool (default True)</dt><dd><p>If we want to monitor the first thread memory usage on the server side.</p>
+</dd>
+<dt>do_check_enough_credits: bool (default False)</dt><dd><p>Check if there are enough credits to fit the solver.</p>
+</dd>
+<dt>do_llm_readable_rules: bool (default True)</dt><dd><p>If we want to convert the rules to a readable format using a LLM.</p>
+</dd>
+<dt>llm_source: str (default ‘auto’)</dt><dd><p>Source where the LLM is running.</p>
+</dd>
+<dt>llm_language: str (default ‘auto’)</dt><dd><p>Language of the LLM.</p>
+</dd>
+<dt>do_store_llm_cache: bool (default True)</dt><dd><p>If we want to store the result of the LLM in the cache (makes futur LLM calls faster).</p>
+</dd>
+<dt>do_check_llm_cache: bool (default True)</dt><dd><p>If we want to check if the results of the prompt are found in the cache (makes LLM calls faster).</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.S_to_index_points_in_rule">
+<span class="sig-name descname"><span class="pre">S_to_index_points_in_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">S</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Index</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.S_to_index_points_in_rule" title="Link to this definition">#</a></dt>
+<dd><p>This method returns the index of the points inside a rule <code class="docutils literal notranslate"><span class="pre">S</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.S_to_s_points_in_rule">
+<span class="sig-name descname"><span class="pre">S_to_s_points_in_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">S</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.S_to_s_points_in_rule" title="Link to this definition">#</a></dt>
+<dd><p>This method returns a boolean Series that tells if the points are in the rule <code class="docutils literal notranslate"><span class="pre">S</span></code> or not.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.S_to_df_filtered">
+<span class="sig-name descname"><span class="pre">S_to_df_filtered</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">S</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.S_to_df_filtered" title="Link to this definition">#</a></dt>
+<dd><p>This method returns the DataFrame of rows of <code class="docutils literal notranslate"><span class="pre">df</span></code> that lie inside a rule <code class="docutils literal notranslate"><span class="pre">S</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.ruleset_count">
+<span class="sig-name descname"><span class="pre">ruleset_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.ruleset_count" title="Link to this definition">#</a></dt>
+<dd><p>This method returns the number of rules held in an instance of the solver.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.i_to_rule">
+<span class="sig-name descname"><span class="pre">i_to_rule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.i_to_rule" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.i_to_S">
+<span class="sig-name descname"><span class="pre">i_to_S</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.i_to_S" title="Link to this definition">#</a></dt>
+<dd><p>This method returns the rule <code class="docutils literal notranslate"><span class="pre">S</span></code> at position <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.i_to_subrules_dataframe">
+<span class="sig-name descname"><span class="pre">i_to_subrules_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.i_to_subrules_dataframe" title="Link to this definition">#</a></dt>
+<dd><p>This method returns a DataFrame which contains the informations about the subrules of the rule <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.i_to_feature_contributions_S">
+<span class="sig-name descname"><span class="pre">i_to_feature_contributions_S</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_rename_cols</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_ignore_col_rule_S</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.i_to_feature_contributions_S" title="Link to this definition">#</a></dt>
+<dd><p>This method returns a DataFrame of the feature contributions of the variables in the rule <code class="docutils literal notranslate"><span class="pre">S</span></code> at position <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.i_to_feature_names">
+<span class="sig-name descname"><span class="pre">i_to_feature_names</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_sort</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.i_to_feature_names" title="Link to this definition">#</a></dt>
+<dd><p>Returns the list of feature names in the rule at position <code class="docutils literal notranslate"><span class="pre">i</span></code>.
+The feature are sorted by contribution, descending.</p>
+<section id="id9">
+<h3>Parameters<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>i: int</dt><dd><p>Index of the rule in the solver.</p>
+</dd>
+<dt>do_sort: bool</dt><dd><p>If we want to sort the features by contribution, descending.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.i_to_readable_text">
+<span class="sig-name descname"><span class="pre">i_to_readable_text</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.i_to_readable_text" title="Link to this definition">#</a></dt>
+<dd><p>Returns the readable text of the rule <code class="docutils literal notranslate"><span class="pre">i</span></code> if it is available.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.i_to_print">
+<span class="sig-name descname"><span class="pre">i_to_print</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indentation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_print_shuffling_scores</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_print_rule_DataFrame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_print_subrules_S</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_show_coverage_diff</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_show_cohen_d</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_show_wy_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_print_feature_contributions_S</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.i_to_print" title="Link to this definition">#</a></dt>
+<dd><p>This method prints the content of the rule <code class="docutils literal notranslate"><span class="pre">i</span></code> in the solver.</p>
+<section id="id10">
+<h3>Parameters<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>i: int</dt><dd><p>Index of the rule to print.</p>
+</dd>
+<dt>indentation: str</dt><dd><p>Indentation of some printed elements.</p>
+</dd>
+<dt>do_print_shuffling_scores: bool</dt><dd><p>If we want to print the shuffling scores.</p>
+</dd>
+<dt>do_print_rule_DataFrame: bool</dt><dd><p>If we want to print a DataFrame of the rule.</p>
+</dd>
+<dt>do_print_subrules_S: bool</dt><dd><p>If we want to print the DataFrame of subrules.</p>
+</dd>
+<dt>do_show_coverage_diff: bool</dt><dd><p>If we want to show the differences of coverage in the DataFrame of subrules.</p>
+</dd>
+<dt>do_show_cohen_d: bool</dt><dd><p>If we want to show the Cohen d in the DataFrame of subrules.</p>
+</dd>
+<dt>do_show_wy_ratio: bool</dt><dd><p>If we want to show the WY ratio in the DataFrame of subrules.</p>
+</dd>
+<dt>do_print_feature_contributions_S: bool</dt><dd><p>If we want to print the DataFrame of feature contributions.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.get_range_i">
+<span class="sig-name descname"><span class="pre">get_range_i</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">complexity_max</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.get_range_i" title="Link to this definition">#</a></dt>
+<dd><p>This method gives the range of <code class="docutils literal notranslate"><span class="pre">i</span></code> in the solver.
+If the integer <code class="docutils literal notranslate"><span class="pre">complexity_max</span></code> is specified, return only this number of elements.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.print">
+<span class="sig-name descname"><span class="pre">print</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_print_dataset_metadata</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_print_monitoring_metadata</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_print_benchmark_scores</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_print_shuffling_scores</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_show_cohen_d</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_show_wy_ratio</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_print_rule_mining_results</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_print_rule_DataFrame</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_print_subrules_S</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_show_coverage_diff</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_print_feature_contributions_S</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separation_width_between_rules</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">79</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_print_last_separator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'full'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.print" title="Link to this definition">#</a></dt>
+<dd><p>This method prints the content of the <code class="docutils literal notranslate"><span class="pre">InsightSolver</span></code> solver.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.print_light">
+<span class="sig-name descname"><span class="pre">print_light</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">print_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'list'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_print_shuffling_scores</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_print_last_separator</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.print_light" title="Link to this definition">#</a></dt>
+<dd><p>This method does a ‘light’ print of the solver.</p>
+<p>Two formats:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">'list'</span></code>: shows the rules via a loop of prints.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'compact'</span></code>: shows the rules in a single DataFrame.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.print_dense">
+<span class="sig-name descname"><span class="pre">print_dense</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">do_print_lifts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_print_shuffling_scores</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.print_dense" title="Link to this definition">#</a></dt>
+<dd><p>This method is aimed at printing a ‘dense’ version of the solver.</p>
+<section id="id11">
+<h3>Parameters<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>do_print_lifts: bool</dt><dd><p>If we want to show the lifts.</p>
+</dd>
+<dt>do_print_shuffling_scores: bool</dt><dd><p>If we want to show the shuffling scores.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.to_dict" title="Link to this definition">#</a></dt>
+<dd><p>This method aims to export the content of the solver to a dictionary.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.to_json_string">
+<span class="sig-name descname"><span class="pre">to_json_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.to_json_string" title="Link to this definition">#</a></dt>
+<dd><p>This method aims to export the content of the solver to a JSON string.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.to_dataframe">
+<span class="sig-name descname"><span class="pre">to_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_append_datetime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_rename_cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.to_dataframe" title="Link to this definition">#</a></dt>
+<dd><p>This method aims to export the content of the solver to a DataFrame.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.to_csv">
+<span class="sig-name descname"><span class="pre">to_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_rename_cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.to_csv" title="Link to this definition">#</a></dt>
+<dd><p>This method is meant to export the content of the solver to a CSV file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.to_excel">
+<span class="sig-name descname"><span class="pre">to_excel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_rename_cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.to_excel" title="Link to this definition">#</a></dt>
+<dd><p>This method is meant to export the solver to a Excel file.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.to_excel_string">
+<span class="sig-name descname"><span class="pre">to_excel_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_rename_cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.to_excel_string" title="Link to this definition">#</a></dt>
+<dd><p>This method is meant to export the solver to a Excel string.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.get_credits_needed_for_computation">
+<span class="sig-name descname"><span class="pre">get_credits_needed_for_computation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.get_credits_needed_for_computation" title="Link to this definition">#</a></dt>
+<dd><p>This method is meant to compute the number of credits for the computation during the fitting of the solver.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.get_df_credits_infos">
+<span class="sig-name descname"><span class="pre">get_df_credits_infos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">computing_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.get_df_credits_infos" title="Link to this definition">#</a></dt>
+<dd><p>This method is meant to retrieve from the server the transactions involving credits.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.get_credits_available">
+<span class="sig-name descname"><span class="pre">get_credits_available</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">computing_source</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'auto'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">service_key</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">user_email</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.get_credits_available" title="Link to this definition">#</a></dt>
+<dd><p>This method is meant to retrieve from the server the amount of credits available.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.convert_target_to_binary">
+<span class="sig-name descname"><span class="pre">convert_target_to_binary</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.convert_target_to_binary" title="Link to this definition">#</a></dt>
+<dd><p>This method converts the target variable to a binary {0,1}-valued Pandas Series.</p>
+<p>To use this method, the attribute <code class="docutils literal notranslate"><span class="pre">solver.target_goal</span></code> must be populated because it specifies how to convert the target variable to binary.
+As a reminder, the target goal must be one of the following:</p>
+<ul class="simple">
+<li><p>A modality of the target variable in the case of a categorical (i.e. <code class="docutils literal notranslate"><span class="pre">'binary'</span></code> or <code class="docutils literal notranslate"><span class="pre">'multiclass'</span></code>) target variable.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'min'</span></code>, <code class="docutils literal notranslate"><span class="pre">'min_q0'</span></code>, <code class="docutils literal notranslate"><span class="pre">'min_q1'</span></code>, <code class="docutils literal notranslate"><span class="pre">'min_q2'</span></code>, <code class="docutils literal notranslate"><span class="pre">'min_q3'</span></code>, <code class="docutils literal notranslate"><span class="pre">'min_c00'</span></code>, <code class="docutils literal notranslate"><span class="pre">'min_c01'</span></code>, …, <code class="docutils literal notranslate"><span class="pre">'min_c98'</span></code>, <code class="docutils literal notranslate"><span class="pre">'min_c99'</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'max'</span></code>, <code class="docutils literal notranslate"><span class="pre">'max_q1'</span></code>, <code class="docutils literal notranslate"><span class="pre">',max_q2'</span></code>, <code class="docutils literal notranslate"><span class="pre">'max_q3'</span></code>, <code class="docutils literal notranslate"><span class="pre">'max_q4'</span></code>, <code class="docutils literal notranslate"><span class="pre">'max_c01'</span></code>, <code class="docutils literal notranslate"><span class="pre">'max_c02'</span></code>, …, <code class="docutils literal notranslate"><span class="pre">'max_c99'</span></code>, <code class="docutils literal notranslate"><span class="pre">'max_c100'</span></code>.</p></li>
+</ul>
+<section id="id12">
+<h3>Returns<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>s_target: pd.Series</dt><dd><p>A {0,1}-valued Pandas Series representing the target variable.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.compute_mutual_information">
+<span class="sig-name descname"><span class="pre">compute_mutual_information</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n_samples</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Series</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.compute_mutual_information" title="Link to this definition">#</a></dt>
+<dd><p>This method computes the mutual information between the features and the target variable.
+The result is returned as a Pandas Series.</p>
+<section id="id13">
+<h3>Parameters<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>n_samples: int</dt><dd><p>An integer that specifies the number of data rows to use in the computation of the mutual information.</p>
+</dd>
+</dl>
+</section>
+<section id="id14">
+<h3>Returns<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>s_mi: pd.Series</dt><dd><p>A Pandas Series that contains the mutual information of the features with the target variable.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.plot">
+<span class="sig-name descname"><span class="pre">plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'en'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_mutual_information</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_banner</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_contributions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_distributions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_mosaics_rule_vs_comp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_mosaics_rule_vs_pop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_legend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.plot" title="Link to this definition">#</a></dt>
+<dd><p>Displays all visualization figures for the solver.</p>
+<section id="id15">
+<h3>Parameters<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>language<span class="classifier">str</span></dt><dd><p>Language for the plots (‘en’ or ‘fr’).</p>
+</dd>
+<dt>do_mutual_information<span class="classifier">bool</span></dt><dd><p>Whether to show the mutual information figure.</p>
+</dd>
+<dt>do_banner<span class="classifier">bool</span></dt><dd><p>Whether to show the banner figures.</p>
+</dd>
+<dt>do_contributions<span class="classifier">bool</span></dt><dd><p>Whether to show feature contributions.</p>
+</dd>
+<dt>do_distributions<span class="classifier">bool</span></dt><dd><p>Whether to show feature distributions.</p>
+</dd>
+<dt>do_mosaics_rule_vs_comp<span class="classifier">bool</span></dt><dd><p>Whether to show the mosaics of rule vs complement figures.</p>
+</dd>
+<dt>do_mosaics_rule_vs_pop<span class="classifier">bool</span></dt><dd><p>Whether to show the mosaics of rule vs population figures.</p>
+</dd>
+<dt>do_legend<span class="classifier">bool</span></dt><dd><p>Whether to show the legend figure.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.to_pdf">
+<span class="sig-name descname"><span class="pre">to_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_mutual_information</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_banner</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_contributions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_distributions</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_mosaics_rule_vs_comp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_mosaics_rule_vs_pop</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_legend</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'en'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.to_pdf" title="Link to this definition">#</a></dt>
+<dd><p>Export a PDF file containing various results and figures of the solver.</p>
+<p>This method is now a simple wrapper around visualization.make_pdf().</p>
+<section id="id16">
+<h3>Parameters<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>output_file<span class="classifier">str, optional</span></dt><dd><p>Path where the PDF should be exported.</p>
+</dd>
+<dt>verbose<span class="classifier">bool, default False</span></dt><dd><p>Verbosity.</p>
+</dd>
+<dt>do_mutual_information<span class="classifier">bool</span></dt><dd><p>Include mutual information figure.</p>
+</dd>
+<dt>do_banner<span class="classifier">bool</span></dt><dd><p>Include banner figures.</p>
+</dd>
+<dt>do_contributions<span class="classifier">bool</span></dt><dd><p>Include contribution figures.</p>
+</dd>
+<dt>do_distributions<span class="classifier">bool</span></dt><dd><p>Include distribution figures.</p>
+</dd>
+<dt>do_mosaics_rule_vs_comp<span class="classifier">bool</span></dt><dd><p>Include mosaics of rule vs complement figures.</p>
+</dd>
+<dt>do_mosaics_rule_vs_pop<span class="classifier">bool</span></dt><dd><p>Include mosaics of rule vs population figures.</p>
+</dd>
+<dt>do_legend<span class="classifier">bool</span></dt><dd><p>Include the legend figure.</p>
+</dd>
+<dt>language<span class="classifier">str</span></dt><dd><p>Language for the plots (‘en’ or ‘fr’).</p>
+</dd>
+</dl>
+</section>
+<section id="id17">
+<h3>Returns<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>pdf_base64<span class="classifier">str</span></dt><dd><p>The PDF content encoded as a base64 string, suitable for in-memory use.</p>
+</dd>
+</dl>
+</section>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="insightsolver.insightsolver.InsightSolver.to_zip">
+<span class="sig-name descname"><span class="pre">to_zip</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">output_file</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_png</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_csv</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_json</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_excel</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">do_pdf</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">language</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'en'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#insightsolver.insightsolver.InsightSolver.to_zip" title="Link to this definition">#</a></dt>
+<dd><p>Export the solver content to a ZIP file.</p>
+<p>This method is now a simple wrapper around visualization.make_zip().</p>
+</dd></dl>
+
+</section>
+</dd></dl>
+
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="modules.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Modules</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="api_utilities.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">api_utilities module</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#note">Note</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#license">License</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.compute_admissible_btypes"><code class="docutils literal notranslate"><span class="pre">compute_admissible_btypes()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.compute_columns_names_to_admissible_btypes"><code class="docutils literal notranslate"><span class="pre">compute_columns_names_to_admissible_btypes()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.validate_class_integrity"><code class="docutils literal notranslate"><span class="pre">validate_class_integrity()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.format_value"><code class="docutils literal notranslate"><span class="pre">format_value()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.S_to_index_points_in_rule"><code class="docutils literal notranslate"><span class="pre">S_to_index_points_in_rule()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.resolve_language"><code class="docutils literal notranslate"><span class="pre">resolve_language()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.gain_to_percent"><code class="docutils literal notranslate"><span class="pre">gain_to_percent()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.search_best_ruleset_from_API_public"><code class="docutils literal notranslate"><span class="pre">search_best_ruleset_from_API_public()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.get_credits_available"><code class="docutils literal notranslate"><span class="pre">get_credits_available()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver"><code class="docutils literal notranslate"><span class="pre">InsightSolver</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.__init__"><code class="docutils literal notranslate"><span class="pre">InsightSolver.__init__()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.ingest_dict"><code class="docutils literal notranslate"><span class="pre">InsightSolver.ingest_dict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.ingest_json_string"><code class="docutils literal notranslate"><span class="pre">InsightSolver.ingest_json_string()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.is_fitted"><code class="docutils literal notranslate"><span class="pre">InsightSolver.is_fitted()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.fit"><code class="docutils literal notranslate"><span class="pre">InsightSolver.fit()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.S_to_index_points_in_rule"><code class="docutils literal notranslate"><span class="pre">InsightSolver.S_to_index_points_in_rule()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.S_to_s_points_in_rule"><code class="docutils literal notranslate"><span class="pre">InsightSolver.S_to_s_points_in_rule()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.S_to_df_filtered"><code class="docutils literal notranslate"><span class="pre">InsightSolver.S_to_df_filtered()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.ruleset_count"><code class="docutils literal notranslate"><span class="pre">InsightSolver.ruleset_count()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.i_to_rule"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_rule()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.i_to_S"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_S()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.i_to_subrules_dataframe"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_subrules_dataframe()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.i_to_feature_contributions_S"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_feature_contributions_S()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.i_to_feature_names"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_feature_names()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.i_to_readable_text"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_readable_text()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.i_to_print"><code class="docutils literal notranslate"><span class="pre">InsightSolver.i_to_print()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.get_range_i"><code class="docutils literal notranslate"><span class="pre">InsightSolver.get_range_i()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.print"><code class="docutils literal notranslate"><span class="pre">InsightSolver.print()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.print_light"><code class="docutils literal notranslate"><span class="pre">InsightSolver.print_light()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.print_dense"><code class="docutils literal notranslate"><span class="pre">InsightSolver.print_dense()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.to_dict"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_dict()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.to_json_string"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_json_string()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.to_dataframe"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_dataframe()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.to_csv"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_csv()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.to_excel"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_excel()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.to_excel_string"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_excel_string()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.get_credits_needed_for_computation"><code class="docutils literal notranslate"><span class="pre">InsightSolver.get_credits_needed_for_computation()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.get_df_credits_infos"><code class="docutils literal notranslate"><span class="pre">InsightSolver.get_df_credits_infos()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.get_credits_available"><code class="docutils literal notranslate"><span class="pre">InsightSolver.get_credits_available()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.convert_target_to_binary"><code class="docutils literal notranslate"><span class="pre">InsightSolver.convert_target_to_binary()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.compute_mutual_information"><code class="docutils literal notranslate"><span class="pre">InsightSolver.compute_mutual_information()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.plot"><code class="docutils literal notranslate"><span class="pre">InsightSolver.plot()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.to_pdf"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_pdf()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insightsolver.insightsolver.InsightSolver.to_zip"><code class="docutils literal notranslate"><span class="pre">InsightSolver.to_zip()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Noé Aubin-Cadot
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, InsightSolver.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

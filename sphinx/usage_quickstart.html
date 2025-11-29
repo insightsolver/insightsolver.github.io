@@ -1,0 +1,532 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Quick Start Example &#8212; InsightSolver API Documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=7a62b934"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'usage_quickstart';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Advanced usage" href="usage_advanced.html" />
+    <link rel="prev" title="Usage" href="usage.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">InsightSolver API Documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="usage.html">Usage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Quick Start Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_advanced.html">Advanced usage</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">Modules</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="insightsolver.html">insightsolver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_utilities.html">api_utilities module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="visualization.html">visualization module</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="credits.html">Credits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Quick Start Example</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="quick-start-example">
+<span id="usage-quickstart"></span><h1>Quick Start Example<a class="headerlink" href="#quick-start-example" title="Link to this heading">#</a></h1>
+<p>This section provides a quick example of how to use the InsightSolver API client.
+Before running the example script, please ensure that:</p>
+<ol class="arabic simple">
+<li><p>You have completed the steps in the <a class="reference internal" href="installation.html"><span class="doc">Installation Guide</span></a>.</p></li>
+<li><p>You have obtained a valid service key.</p></li>
+<li><p>You have credits available.</p></li>
+</ol>
+<p>The following example demonstrates the basic usage of the InsightSolver API client, showing how to initialize the solver and generate insights.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import Pandas</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Import some data: https://www.kaggle.com/competitions/titanic/data</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;kaggle_titanic_train.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># Specify the name of the target variable</span>
+<span class="n">target_name</span> <span class="o">=</span> <span class="s1">&#39;Survived&#39;</span> <span class="c1"># We are interested in whether the passengers survived or not</span>
+
+<span class="c1"># Specify the target goal</span>
+<span class="n">target_goal</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># We are searching rules that describe survivors</span>
+
+<span class="c1"># Choose how features should be interpreted</span>
+<span class="n">columns_types</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s1">&#39;Survived&#39;</span> <span class="p">:</span> <span class="s1">&#39;binary&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;Pclass&#39;</span>   <span class="p">:</span> <span class="s1">&#39;continuous&#39;</span><span class="p">,</span> <span class="c1"># &#39;multiclass&#39; (i.e. unordered) or &#39;continuous&#39; (i.e. ordered)</span>
+   <span class="s1">&#39;Name&#39;</span>     <span class="p">:</span> <span class="s1">&#39;ignore&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;Sex&#39;</span>      <span class="p">:</span> <span class="s1">&#39;binary&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;Age&#39;</span>      <span class="p">:</span> <span class="s1">&#39;continuous&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;SibSp&#39;</span>    <span class="p">:</span> <span class="s1">&#39;continuous&#39;</span><span class="p">,</span> <span class="c1"># &#39;multiclass&#39; (i.e. unordered) or &#39;continuous&#39; (i.e. ordered)</span>
+   <span class="s1">&#39;Parch&#39;</span>    <span class="p">:</span> <span class="s1">&#39;continuous&#39;</span><span class="p">,</span> <span class="c1"># &#39;multiclass&#39; (i.e. unordered) or &#39;continuous&#39; (i.e. ordered)</span>
+   <span class="s1">&#39;Ticket&#39;</span>   <span class="p">:</span> <span class="s1">&#39;ignore&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;Fare&#39;</span>     <span class="p">:</span> <span class="s1">&#39;continuous&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;Cabin&#39;</span>    <span class="p">:</span> <span class="s1">&#39;ignore&#39;</span><span class="p">,</span>
+   <span class="s1">&#39;Embarked&#39;</span> <span class="p">:</span> <span class="s1">&#39;multiclass&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="c1"># Import the class InsightSolver from the module insightsolver</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">insightsolver</span><span class="w"> </span><span class="kn">import</span> <span class="n">InsightSolver</span>
+
+<span class="c1"># Create an instance of the class InsightSolver</span>
+<span class="n">solver</span> <span class="o">=</span> <span class="n">InsightSolver</span><span class="p">(</span>
+   <span class="n">df</span>            <span class="o">=</span> <span class="n">df</span><span class="p">,</span>            <span class="c1"># A dataset</span>
+   <span class="n">target_name</span>   <span class="o">=</span> <span class="n">target_name</span><span class="p">,</span>   <span class="c1"># Name of the target variable</span>
+   <span class="n">target_goal</span>   <span class="o">=</span> <span class="n">target_goal</span><span class="p">,</span>   <span class="c1"># Target goal</span>
+   <span class="n">columns_types</span> <span class="o">=</span> <span class="n">columns_types</span><span class="p">,</span> <span class="c1"># Columns types</span>
+<span class="p">)</span>
+
+<span class="c1"># Specify the service key</span>
+<span class="n">service_key</span> <span class="o">=</span> <span class="s1">&#39;name_of_your_service_key.json&#39;</span>
+
+<span class="c1"># Fit the solver</span>
+<span class="n">solver</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+   <span class="n">service_key</span>  <span class="o">=</span> <span class="n">service_key</span><span class="p">,</span> <span class="c1"># Use your API service key here</span>
+<span class="p">)</span>
+
+<span class="c1"># Print the rule mining results</span>
+<span class="n">solver</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;dense&#39;</span><span class="p">)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">                                    contribution variable               rule     nans</span>
+<span class="sd">i p_value coverage gain     cohen_d</span>
+
+<span class="sd">0 2e-67   19.1%    +146.73% 84.76</span>
+<span class="sd">                                           86.2%      Sex             female</span>
+<span class="sd">                                           13.8%   Pclass             [1, 2]</span>
+<span class="sd">1 3e-20   12.2%    +105.55% 19.80</span>
+<span class="sd">                                           81.4%   Pclass             [1, 1]</span>
+<span class="sd">                                           11.3%     Fare  [7.925, 512.3292]</span>
+<span class="sd">                                            7.3%      Age        [4.0, 42.0]  exclude</span>
+<span class="sd">2 7e-12    7.9%    +100.98% 8.37</span>
+<span class="sd">                                           57.4%    Parch             [1, 6]</span>
+<span class="sd">                                           31.4%    SibSp             [0, 1]</span>
+<span class="sd">                                           11.2%      Age       [0.42, 25.0]  exclude</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>In this specific example, the InsightSolver API gives us three rules in which we find more survivors of the Titanic:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">(i=0)</span></code> : <strong>Women in 1st or 2nd class.</strong> This group covers 19.1% of the passengers and has a survival gain of +146.73% compared to the population of the Titanic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(i=1)</span></code> : <strong>Rich 1st class that are not too old (which we know the age).</strong> This group covers 12.2% of the passengers and has a survival gain of +105.55% compared to the population of the Titanic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(i=2)</span></code> : <strong>Children (which we know the age) with not too many siblings.</strong> This group covers 7.9% of the passengers and has a survival gain of +100.98% compared to the population of the Titanic.</p></li>
+</ul>
+<p>Note that there could be a survivor bias in the two rules <code class="docutils literal notranslate"><span class="pre">i=1</span></code> and <code class="docutils literal notranslate"><span class="pre">i=2</span></code> because we know the age of the survivors more than we know the age of the non-survivors of the Titanic.
+We could also use <code class="docutils literal notranslate"><span class="pre">target_goal</span> <span class="pre">=</span> <span class="pre">0</span></code> to look for passengers that did not survive the Titanic:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specify the target goal</span>
+<span class="n">target_goal</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># We are searching rules that describe non-survivors</span>
+
+<span class="c1"># Create an instance of the class InsightSolver</span>
+<span class="n">solver</span> <span class="o">=</span> <span class="n">InsightSolver</span><span class="p">(</span>
+   <span class="n">df</span>            <span class="o">=</span> <span class="n">df</span><span class="p">,</span>            <span class="c1"># A dataset</span>
+   <span class="n">target_name</span>   <span class="o">=</span> <span class="n">target_name</span><span class="p">,</span>   <span class="c1"># Name of the target variable</span>
+   <span class="n">target_goal</span>   <span class="o">=</span> <span class="n">target_goal</span><span class="p">,</span>   <span class="c1"># Target goal</span>
+   <span class="n">columns_types</span> <span class="o">=</span> <span class="n">columns_types</span><span class="p">,</span> <span class="c1"># Columns types</span>
+<span class="p">)</span>
+
+<span class="c1"># Fit the solver</span>
+<span class="n">solver</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+   <span class="n">service_key</span> <span class="o">=</span> <span class="n">service_key</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Print the rule mining results</span>
+<span class="n">solver</span><span class="o">.</span><span class="n">print</span><span class="p">(</span><span class="n">mode</span><span class="o">=</span><span class="s1">&#39;dense&#39;</span><span class="p">)</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">                                    contribution variable            rule     nans</span>
+<span class="sd">i p_value coverage gain    cohen_d</span>
+
+<span class="sd">0 7e-55   42.6%    +45.64% 60.04</span>
+<span class="sd">                                           80.1%      Sex            male</span>
+<span class="sd">                                           11.1%     Fare    [0.0, 26.25]</span>
+<span class="sd">                                            8.8%    Parch          [0, 0]</span>
+<span class="sd">1 2e-14    9.2%    +56.36% 10.32</span>
+<span class="sd">                                           41.1%     Fare  [7.8875, 14.5]</span>
+<span class="sd">                                           35.0%      Age    [19.0, 25.0]  include</span>
+<span class="sd">                                           23.9%   Pclass          [3, 3]</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p>In this specific example, the InsightSolver API gives us two rules in which we find more non-survivors of the Titanic:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">(i=0)</span></code> : <strong>Poor males without a family.</strong> This group covers 42.6% of the passengers and has a non-survival gain of +45.64% compared to the population of the Titanic.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">(i=1)</span></code> : <strong>Poor young third class adults (include missing ages).</strong> This group covers 9.2% of the passengers and has a non-survival gain of +56.36% compared to the population of the Titanic.</p></li>
+</ul>
+<p>Note that there could be a survivor bias in the rule <code class="docutils literal notranslate"><span class="pre">i=1</span></code> because we know the age of the non-survivors less than we know the age of the survivors of the Titanic.
+In conclusion, using the InsightSolver API, we know that <em>Rose DeWitt Bukater</em> (young rich female, 1st class, with her family) had a higher chance to survive the Titanic than <em>Jack Dawson</em> (3rd class young male without a family).
+For more technical details about the API, please refer to the <a class="reference external" href="modules.html">detailed documentation</a>.</p>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="usage.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Usage</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="usage_advanced.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Advanced usage</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Noé Aubin-Cadot
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, InsightSolver.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
