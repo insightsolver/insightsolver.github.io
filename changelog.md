@@ -1,8 +1,12 @@
 # Changelog
 
+## 2025-11-29 (0.1.3)
+
+- Trying to fix the CSS of the Sphinx documentation not working (new `.nojekyll` file).
+
 ## 2025-11-29 (0.1.2)
 
-- Trying to fix the CSS not working.
+- Trying to fix the CSS of the Sphinx documentation not working.
 
 ## 2025-11-29 (0.1.1)
 
