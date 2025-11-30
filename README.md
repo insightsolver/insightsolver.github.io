@@ -1,2 +1,3 @@
 # insightsolver.github.io
-InsightSolver GitHub web page
+
+This repo hosts the InsightSolver GitHub web page which you can visit here: [insightsolver.github.io](https://insightsolver.github.io).

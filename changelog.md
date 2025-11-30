@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025-11-29 (0.1.4)
+
+- In the `README` of the repo of the page, added the link to the web page.
+
 ## 2025-11-29 (0.1.3)
 
 - Trying to fix the CSS of the Sphinx documentation not working (new `.nojekyll` file).
