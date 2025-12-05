@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025-12-05 (0.1.6)
+
+- Fixed a bug with the index.
+
 ## 2025-12-05 (0.1.5)
 
 - Changed the phrasing of the first sentence and the paragraph of the hero.
