@@ -1,5 +1,9 @@
 # Changelog
 
+## 2025-12-05 (0.1.5)
+
+- Changed the phrasing of the first sentence and the paragraph of the hero.
+
 ## 2025-11-29 (0.1.4)
 
 - In the `README` of the repo of the page, added the link to the web page.
